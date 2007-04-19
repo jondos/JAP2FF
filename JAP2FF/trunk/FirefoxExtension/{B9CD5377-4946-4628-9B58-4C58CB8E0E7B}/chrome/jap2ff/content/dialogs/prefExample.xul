@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://jap2ff/skin/styles/browser-overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<overlay id="jap2ff_prefPane"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"         
+         >
+          
+    <prefpane id="jap2ffPanePriv" 
+              >
+	  
+	    
+        <tabbox id="jap2ff_tabBoxPrefs" minheight="280px" maxheight="280px" >
+            <tabs>
+                <tab id="jap2ff_generalTab"
+                     label="Tab 1"
+                     crop="right"
+                     />
+                <tab label="Tab 2" 
+                     id="jap2ff_toolbarTab"
+                     crop="right"
+                     />
+            </tabs> 
+            <tabpanels >
+                <tabpanel orient="vertical"  flex="1" height="200px">
+                    <vbox align="center" flex="1">
+					    <hbox align="center" flex="1">
+						    <label value="Beispiel Tabinhalt" flex="1"/>
+						</hbox>
+					</vbox>
+				</tabpanel>
+                <tabpanel />
+	        </tabpanels> 
+	    </tabbox>
+	</prefpane>
+</overlay>

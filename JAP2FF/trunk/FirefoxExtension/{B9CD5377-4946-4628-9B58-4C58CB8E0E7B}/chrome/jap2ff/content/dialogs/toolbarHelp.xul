@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<prefwindow id="toolbarHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         type="prefwindow"
+         buttons="accept"
+         buttonlabelaccept="Schließen"
+		 minwidth="650px"
+         minheight="400px"
+         title="&jap2ff.toolbarHelp.titel.label;"
+         >
+         
+         <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/utils.js"/>
+         
+    <prefpane 
+        id="toolbarOnOffPane"
+        minwidth="90%"
+        minheight="90%"
+        >
+	  
+	    <preferences>
+            <preference id="jap2ff_showToolbarHelp"
+                name="extensions.jap2ff.showToolbarHelp"
+                type="bool"/>        
+        </preferences>
+	            
+                    
+                        
+                        <groupbox 
+                            flex="1"
+                            minwidth="100%"
+                            minheight="350px"
+                            >
+                            <!--<caption label="&jap2ff.toolbarHelp.symbolBox.label;"/>-->
+                            <grid flex="1">
+							  <columns>  
+							    <column />
+								<column felx="1"/>
+                                <column felx="1"/> 							  
+							  </columns>
+                              <rows>
+							    <row>
+								  <label value="Element"/>
+								  <label value="Erklärung"/>
+                                  
+								</row>
+                                <row>
+								  <image src="chrome://jap2ff/content/icons/toolbarHelp/de-anONCheckbox.jpg"/>
+								  <label value="Erklärung"/>
+								  <button label="vertiefen ..."/>
+                                </row>
+                                <row>
+								  <image src="chrome://jap2ff/content/icons/toolbarHelp/de-CascadeDropDown.jpg"
+								  width="245px"
+								  height="28px"
+								  />
+								  <label value="Erklärung"/>
+								  <button label="vertiefen ..."/>
+                                </row>
+                                <row>
+								  <image src="chrome://jap2ff/content/icons/reloadCascades/reload.gif"/>
+								  <label value="Erklärung"/>
+								  <button label="vertiefen ..."/>
+                                </row>
+                                <row>
+								  <image src="chrome://jap2ff/content/icons/toolbarHelp/de-UserCount.jpg"
+								         width="116" 
+				                         height="32"
+								  />
+								  <label value="Erklärung"/>
+								  <button label="vertiefen ..."/>
+                                </row>
+								<row>
+								  <image src="chrome://jap2ff/content/icons/anonmeter/meter5.gif"/>
+								  <label value="Erklärung"/>
+								  <button label="vertiefen ..."/>
+                                </row>
+                                <row>
+								  <image src="chrome://jap2ff/content/icons/anonbar/anon5.jpg"
+								         width="120" 
+				                         height="15"
+								         />
+								  <label value="Erklärung"/>
+								  <button label="vertiefen ..."/>
+                                </row>
+                                <row>
+								  <image src="chrome://jap2ff/content/icons/toolbarHelp/de-anonLevel.jpg"
+								         width="48" 
+				                         height="30"
+								         />
+								  <label value="Erklärung"/>
+								  <button label="vertiefen ..."/>
+                                </row>									
+							  </rows>								
+							  
+							</grid>
+							<!--
+							<html:table>
+                                    <html:tr>
+                                        <html:td>
+                                            <html:span>Element</html:span>
+                                        </html:td>
+                                        <html:td>
+                                            <html:span>Erklärung</html:span>
+                                        </html:td>
+                                    </html:tr>
+                                    <html:tr>
+                                        <html:td>
+                                            <html:span>Ein / Aus</html:span>
+                                        </html:td>
+                                        <html:td>
+                                            <html:span>Schaltet die Anonymität ein oder aus.</html:span>
+                                            <button label="&jap2ff.prev.tabHelpWindow.toolbarOnOffButton.label;" onclick="jap2ff_showMore('toolbarOnOff');"/>
+                                        </html:td>
+                                    </html:tr>
+                                    <html:tr>
+                                        <html:td>
+                                            <html:span>Kaskade</html:span>
+                                        </html:td>
+                                        <html:td>
+                                            <html:span>Auswahl eines Anonymisierungsdienstes</html:span>
+                                            <button label="&jap2ff.prev.tabHelpWindow.toolbarOnOffButton.label;" onclick="jap2ff_showMore('toolbarKaskade');"/>
+                                        </html:td>
+                                    </html:tr>
+                                    <html:tr>
+                                        <html:td>
+                                            <html:span>Status</html:span>
+                                        </html:td>
+                                        <html:td>
+                                            <html:span>Betriebszustand des Anonymisierungsmodules</html:span>
+                                            <button label="&jap2ff.prev.tabHelpWindow.toolbarOnOffButton.label;" onclick="jap2ff_showMore('toolbarStatus');"/>
+                                        </html:td>
+                                    </html:tr>
+                                    <html:tr>
+                                        <html:td>
+                                            <html:span>Nutzerzahl</html:span>
+                                        </html:td>
+                                        <html:td>
+                                            <html:span>aktuelle Anzahl der Nutzer der gewählten Kaskade</html:span>
+                                            <button label="&jap2ff.prev.tabHelpWindow.toolbarOnOffButton.label;" onclick="jap2ff_showMore('toolbarAnzNutzer');"/>
+                                        </html:td>
+                                    </html:tr>
+                                    <html:tr>
+                                        <html:td>
+                                            <html:span>Anonmeter</html:span>
+                                        </html:td>
+                                        <html:td>
+                                            <html:span>zeigt den Grad der Anonymität an</html:span>
+                                            <button label="&jap2ff.prev.tabHelpWindow.toolbarOnOffButton.label;" onclick="jap2ff_showMore('toolbarAnonmeter');"/>
+                                        </html:td>
+                                    </html:tr>
+                            </html:table>-->
+                            
+            </groupbox>
+                        
+                                
+
+	</prefpane>
+
+</prefwindow>

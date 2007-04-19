@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog id="noJavaHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         buttons="accept,cancel"
+		 minwidth="300px"
+         minheight="150px"
+         title="&jap2ff.warnDirect.window.label;"
+         onload="init();"
+         buttonlabelaccept="&jap2ff.warnDirect.accept.label;"
+         buttonlabelcancel="&jap2ff.warnDirect.cancel.label;"
+         ondialogaccept="return doOK();"
+         ondialogcancel="return doCancel();"
+         >
+     
+		 <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/loadConfirm.js"/>
+		 
+		 <vbox>
+		    <spacer flex="1"/>
+		    <groupbox flex="1" style="text-align:center;">   
+			   <description id="loadConfirm" 
+			                value="&jap2ff.warnDirect.text.label;" 
+			                />
+			</groupbox>   
+			<spacer flex="1"/>
+		    <checkbox id="warn_showAgain" 
+		              label="&jap2ff.warnDirect.again.label;" 
+		              onclick="changeWarning(this);"
+		              />
+		 </vbox>
+	     
+	  
+</dialog>

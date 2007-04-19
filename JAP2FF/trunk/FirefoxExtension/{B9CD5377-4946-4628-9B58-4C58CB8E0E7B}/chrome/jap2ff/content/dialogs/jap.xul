@@ -1,0 +1,795 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://jap2ff/skin/styles/browser-overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<overlay id="jap2ff_prefPane"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"         
+         >
+         
+         <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/utils.js"/>
+         <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/database.js"/>
+          
+    <prefpane id="jap2ffPanePriv" 
+              onpaneload="jap2ff_preloadSettings();"
+              >
+	  
+	    <preferences>
+	        <preference id="jap2ff_userLevel"
+	            name="extensions.jap2ff.userLevel"
+	            type="int"/>
+            <preference id="jap2ff_showToolbar"
+                name="extensions.jap2ff.showToolbar"
+                type="bool"/>
+            <preference id="jap2ff_showAnonmeter"
+                name="extensions.jap2ff.showAnonmeter"
+                type="bool"/>
+            <preference id="jap2ff_showAnonbar"
+                name="extensions.jap2ff.showAnonbar"
+                type="bool"/>
+            <preference id="jap2ff_showAnontext"
+                name="extensions.jap2ff.showAnontext"
+                type="bool"/>           
+            <preference id="jap2ff_showToolbarState"
+                name="extensions.jap2ff.showToolbarState"
+                type="bool"/>
+            <preference id="jap2ff_showToolbarUserCount"
+                name="extensions.jap2ff.showToolbarUserCount"
+                type="bool"/>
+            <preference id="jap2ff_refreshToolbar"    
+                name="extensions.jap2ff.refreshOnlyWhenSetOn"    
+                type="bool"/>
+            <preference id="jap2ff_showUrlbarIcon"
+                name="extensions.jap2ff.showUrlbarIcon"
+                type="bool"/>            
+            <preference id="jap2ff_showStatusbar"
+                name="extensions.jap2ff.showStatusbar"
+                type="bool"/>
+            <preference id="jap2ff_showContext"
+                name="extensions.jap2ff.showContext"
+                type="bool"/>
+            <preference id="jap2ff_startOption"
+                name="extensions.jap2ff.startOption"
+                type="int"/>
+            <preference id="jap2ff_proxyOn"
+                name="extensions.jap2ff.proxyOn"
+                type="bool"/>
+            <preference id="jap2ff_startJapManual"
+                name="extensions.jap2ff.startJapManual"
+                type="bool"/>
+            <!-- Help Window Flags -->    
+            <preference id="jap2ff_showStatusbarIconHelp"
+                name="extensions.jap2ff.showStatusIconHelp"
+                type="bool"/>
+           
+            <preference id="jap2ff_showAnonLevel"
+                name="extensions.jap2ff.showAnonLevel"
+                type="int"/>
+            
+            <preference id="jap2ff_showToolbarHelp"
+                name="extensions.jap2ff.showToolbarHelp"
+                type="bool"/>        
+            
+            <!--  AnonDetailFlags  -->
+            <preference id="jap2ff_anonDetailCookie"
+                name="extensions.jap2ff.noCookies"
+                type="bool"/>        
+            <preference id="jap2ff_anonDetailJavaScript"
+                name="extensions.jap2ff.noJavaScript"
+                type="bool"/> 
+            <preference id="jap2ff_anonDetailJava"
+                name="extensions.jap2ff.noSecJava"
+                type="bool"/>              
+            <preference id="jap2ff_anonDetailReferers"
+                name="extensions.jap2ff.noReferers"
+                type="bool"/>
+            <preference id="jap2ff_anonDetailFakeAgent"
+                name="extensions.jap2ff.fakeAgent"
+                type="bool"/>
+            <preference id="jap2ff_anonDetailFakeAgentType"
+                name="extensions.jap2ff.fakeAgentType"
+                type="int"/>    
+            <preference id="jap2ff_warnDetailOnOffWarning"
+                name="extensions.jap2ff.onOffWarning"
+                type="bool"/>    
+            <preference id="jap2ff_sendDummy"
+                name="extensions.jap2ff.sendDummy"
+                type="bool"/>    
+            <preference id="jap2ff_DummyTraffic"
+                name="extensions.jap2ff.DummyTraffic"
+                type="int"/>   
+            <preference id="jap2ff_DummyWhenOff"
+                name="extensions.jap2ff.DummyWhenOff"
+                type="bool"/>   
+            
+            <!-- Kaskaden  -->
+            <preference id="jap2ff_AutoReCon"
+                name="extensions.jap2ff.AutoReCon"
+                type="bool"/>
+                
+            <!-- anonlib Proxy -->
+            <preference id="jap2ff_isUseProxy"
+                name="extensions.jap2ff.isUseProxy"
+                type="bool"/>
+            <preference id="jap2ff_proxyHost"
+                name="extensions.jap2ff.proxyHost"
+                type="string"/>
+            <preference id="jap2ff_proxyPort"
+                name="extensions.jap2ff.proxyPort"
+                type="int"/>                    
+                                          
+            <!-- Loggin -->
+            <preference id="jap2ff_LogLevel"
+                name="extensions.jap2ff.LogLevel"
+                type="int"/>
+            <preference id="jap2ff_LogType"
+                name="extensions.jap2ff.LogType"
+                type="int"/>
+            <preference id="jap2ff_LogDetail"
+                name="extensions.jap2ff.LogDetail"
+                type="int"/>
+            <preference id="jap2ff_Log2File"
+                name="extensions.jap2ff.Log2File"
+                type="bool"
+                />
+            <preference id="jap2ff_LogFile" 
+                name="extensions.jap2ff.LogFile"
+                type="string"
+                />        
+             
+            <preference id="jap2ff_loadConfirm"
+                name="extensions.jap2ff.loadConfirm"
+                type="bool"
+                />    
+                
+            <preference id="jap2ff_noPayCasc"
+                name="extensions.jap2ff.noPayCasc"
+                type="bool"/>
+                
+            <preference id="jap2ff_minUserWarn"
+                name="extensions.jap2ff.minUserWarn"
+                type="bool"/>
+                
+            <preference id="jap2ff_minUserCount"
+                name="extensions.jap2ff.minUserCount"
+                type="int"/>             
+                                             
+        </preferences>
+	  
+        <tabbox id="jap2ff_tabBoxPrefs" minheight="280px" maxheight="280px" >
+            <tabs>
+                <tab id="jap2ff_generalTab"
+                     label="&jap2ff.prev.tabGeneral.label;"
+                     crop="right"
+                     />
+                <tab label="&jap2ff.prev.tabToolbar.label;" 
+                     id="jap2ff_toolbarTab"
+                     crop="right"
+                     />
+                <tab label="&jap2ff.pref.tabWarn.label;" 
+                     crop="right" 
+                     id="jap2ff_warnTab"
+                     />
+                <tab label="&jap2ff.pref.tabAnon.label;" 
+                     crop="right" 
+                     id="jap2ff_anonTab"
+                     />
+                <tab label="&jap2ff.pref.tabKaskade.label;" 
+                     id="jap2ff_CascadeTab"
+                     crop="right"
+                     />
+                <tab label="&jap2ff.pref.tabInfoService.label;" 
+                     id="jap2ff_InfoServiceTab"
+                     crop="right"
+                     onclick="jap2ff_selectCascadeRow();"
+                     />
+                <tab label="&jap2ff.pref.tabKonto.label;" 
+                     id="jap2ff_KontoTab"
+                     crop="right"
+                     />
+                <tab label="&jap2ff.prev.tabDebug.label;" 
+                     id="jap2ff_debug" 
+                     crop="right"
+                     />
+                <tab id="jap2ff_noJavaPlugin" 
+                     label="&jap2ff.prev.tabNoPluginInfo.label;" 
+                     crop="right"
+                     collapsed="true"
+                     />     
+	        </tabs> 
+            <tabpanels >
+                <tabpanel orient="vertical"  >
+                        <groupbox tooltiptext="&jap2ff.prev.tooltip.userSkillGroup;">
+                            <caption label="&jap2ff.prev.tabGeneral.Userlevel.label;"/>
+                            <hbox>
+                                <radiogroup preference="jap2ff_userLevel" orient="horizontal">
+                                    <radio label="&jap2ff.prev.tabGeneral.Userlevel.beginner.label;" tooltiptext="&jap2ff.prev.tooltip.userSkillBeginner;" value="0" onclick="jap2ff_setUserLevel(this.value);"/>
+                                    <radio label="&jap2ff.prev.tabGeneral.Userlevel.normal.label;"   tooltiptext="&jap2ff.prev.tooltip.userSkillNormal;" value="1" onclick="jap2ff_setUserLevel(this.value);"/>/>
+                                    <radio label="&jap2ff.prev.tabGeneral.Userlevel.expert.label;"   tooltiptext="&jap2ff.prev.tooltip.userSkillExpert;" value="2" onclick="jap2ff_setUserLevel(this.value);"/>
+                                </radiogroup>
+                            </hbox>
+                            <spacer id = "jap2ff_userLevel_Help_spacer" flex="1" minheight="10px;" />
+                            <description id="jap2ff_userLevel_Help" collapsed="true">
+                                <label value="&jap2ff.prev.tabGeneral.UserLevelDescr;" />    
+                            </description>
+                        </groupbox>
+                        <groupbox id="jap2ff_gui_pref"
+                                  tooltiptext="&jap2ff.prev.tooltip.elementsGroup;"
+                                  >
+                            <caption label="&jap2ff.prev.tabGeneral.GUI.label;"/>
+                            <hbox>
+                                <vbox>
+                                    <checkbox id="shUrlbarIcon" 
+                                              label="&jap2ff.prev.tabGeneral.GUI.label.urlBarIcon;" 
+                                              preference="jap2ff_showUrlbarIcon"
+                                              tooltiptext="&jap2ff.prev.tooltip.elementsUrlBarIcon;"
+                                              />
+                                </vbox>
+                                <vbox>
+                                    <checkbox id="shToolbar_0" 
+                                              label="&jap2ff.prev.tabGeneral.GUI.label.toolbar;" 
+                                              onclick="jap2ff_changeToolbar(this);" 
+                                              preference="jap2ff_showToolbar"
+                                              tooltiptext="&jap2ff.prev.tooltip.elementsToolbar;"
+                                              />
+                                </vbox>
+                                <vbox>
+                                    <checkbox id="shStatusIcon" 
+                                              label="&jap2ff.prev.tabGeneral.GUI.label.statusbarIcon;" 
+                                              preference="jap2ff_showStatusbar"
+                                              tooltiptext="&jap2ff.prev.tooltip.elementsStatusbarIcon;"
+                                              />
+                                </vbox>
+                                <vbox>
+                                    <checkbox id="shContext" 
+                                              label="&jap2ff.prev.tabGeneral.GUI.label.contextMenu;" 
+                                              preference="jap2ff_showContext"
+                                              tooltiptext="&jap2ff.prev.tooltip.elementsContextMenu;"
+                                              />
+                                </vbox>
+                            </hbox>
+                        </groupbox>
+                        <groupbox id="jap2ff_proxy_pref"
+                                  tooltiptext="&jap2ff.prev.tooltip.startOptionsGroup;"
+                                  >
+                            <caption label="&jap2ff.prev.tabGeneral.proxy.label;"/>
+                            <hbox>
+                                <radiogroup preference="jap2ff_startOption">
+                                    <radio value="0" 
+                                           label="&jap2ff.prev.tabGeneral.proxy.label.normal;" 
+                                           tooltiptext="&jap2ff.prev.tooltip.startOptionsNormal;"
+                                           />
+                                    <radio value ="1" 
+                                           label="&jap2ff.prev.tabGeneral.proxy.label.always;" 
+                                           tooltiptext="&jap2ff.prev.tooltip.startOptionsAlways;"
+                                           />
+                                    <radio value="2" 
+                                           label="&jap2ff.prev.tabGeneral.proxy.label.saveMem;" 
+                                           tooltiptext="&jap2ff.prev.tooltip.startOptionsSaveMem;"
+                                           />
+                                </radiogroup>
+                            </hbox>
+                        </groupbox>                           
+		        </tabpanel>
+		        <tabpanel orient="vertical">
+                    <groupbox orient="horizontal">
+                        <caption label="&jap2ff.prev.tabToolbar.label;"/>
+                        <spacer felx="1" height="10px"/>
+                            <vbox>
+                                <checkbox id="shToolbar_1" 
+                                          label="&jap2ff.prev.tabToolbar.showToolbar.label;" 
+                                          onclick="jap2ff_changeToolbar(this);" 
+                                          preference="jap2ff_showToolbar"
+                                          tooltiptext="&jap2ff.prev.tooltip.elementsToolbar;"
+                                          />                                
+                            </vbox>        
+                    </groupbox>
+                    <groupbox
+                               tooltiptext="&jap2ff.prev.tooltip.toolbarElementsGroup;"     
+                               >
+                            <caption label="&jap2ff.pref.tabToolbar.toolbarElements.label;" />
+                            <hbox>
+                                <vbox id="jap2ff_shToolbarStateBox">
+                                    <checkbox id="jap2ff_shToolbarState" 
+                                              collapsed="true" hidden="true"
+                                              label="&jap2ff.prev.tabToolbar.toolbarElements.label.anonlibState;" 
+                                              preference="jap2ff_showToolbarState"
+                                              tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnonLibState;"
+                                              />
+                                </vbox>
+                                <vbox>
+                                    <checkbox id="jap2ff_shToolbarUserCount" 
+                                              label="&jap2ff.prev.tabToolbar.toolbarElements.label.userCount;" 
+                                              preference="jap2ff_showToolbarUserCount"
+                                              tooltiptext="&jap2ff.prev.tooltip.toolbarElementsUserCount;"
+                                              />
+                                </vbox>
+                                <vbox>
+                                    <checkbox id="jap2ff_shAnonmeter" 
+                                              label="&jap2ff.prev.tabToolbar.toolbarElements.label.anonmeter;" 
+                                              preference="jap2ff_showAnonmeter"
+                                              tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnonmeter;"
+                                              />
+                                </vbox>
+                                <vbox>
+                                    <checkbox id="jap2ff_shAnonbar" 
+                                              label="&jap2ff.prev.tabToolbar.toolbarElements.label.anonbar;" 
+                                              preference="jap2ff_showAnonbar"
+                                              tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnonbar;"
+                                              />
+                                </vbox>
+                                <vbox>
+                                    <checkbox id="jap2ff_shAnontext" 
+                                              label="&jap2ff.prev.tabToolbar.toolbarElements.label.anontext;" 
+                                              preference="jap2ff_showAnontext"
+                                              tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnontext;"
+                                              />
+                                </vbox>
+                            </hbox>
+                        </groupbox>
+                        <groupbox id="jap2ff_anonLevel"
+                                  tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnonLevel;"
+                                  >
+                            <caption label="&jap2ff.pref.tabToolbar.toolbarElementsAnon.label;" />
+                            <radiogroup orient="horizontal" preference="jap2ff_showAnonLevel">
+                                <radio label="&jap2ff.pref.tabToolbar.toolbarElementsAnonNone;" 
+                                       value="0"
+                                       />
+                                <radio label="&jap2ff.pref.tabToolbar.toolbarElementsAnontext;" 
+                                       value="1"
+                                       tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnontext;"
+                                       />
+                                <radio label="&jap2ff.prev.tabToolbar.toolbarElementsAnonmeter;" 
+                                       value="2"
+                                       tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnonmeter;"
+                                       />
+                                <radio label="&jap2ff.prev.tabToolbar.toolbarElementsAnonbar;" 
+                                       value="3"
+                                       tooltiptext="&jap2ff.prev.tooltip.toolbarElementsAnonbar;"
+                                       />
+                            </radiogroup>
+                        </groupbox>
+                        <groupbox>
+                             <caption label="&jap2ff.prev.tabToolbar.toolbarRefresh.label;" />
+                             <radiogroup id="jap2ff_refreshToolbarCheckbox" 
+                                         orient="horizontal" 
+                                         preference="jap2ff_refreshToolbar">
+                                 <radio label="&jap2ff.prev.tabToolbar.toolbarRefresh.optionAllways;"
+                                        value="false"
+                                        tooltiptext="&jap2ff.prev.tooltip.toolbarRefreshAlways;"
+                                        />
+                                 <radio label="&jap2ff.prev.tabToolbar.toolbarRefresh.option;"
+                                        value="true"
+                                        tooltiptext="&jap2ff.prev.tooltip.toolbarRefresh;"/>       
+                             </radiogroup>
+                        </groupbox>
+		        </tabpanel>
+		        <tabpanel orient="vertical">
+		                <groupbox orient="vertical"
+		                          
+		                          >
+                            <caption label="&jap2ff.pref.tabWarn.warnings.label;" />
+                            
+                                <checkbox id="jap2ff_loadConfCheck" 
+                                          label="&jap2ff.pref.tabWarn.warnings.label.directWarn;" 
+                                          preference="jap2ff_loadConfirm" 
+                                          tooltiptext="&jap2ff.prev.tooltip.warning.directConnect;"
+                                          />
+                                <checkbox id="onOffWarn" 
+                                          label="&jap2ff.pref.tabWarn.warnings.label.switchMode;" 
+                                          preference="jap2ff_warnDetailOnOffWarning"
+                                          tooltiptext="&jap2ff.prev.tooltip.warning.switchDirect;"
+                                          />
+                            
+                            <hbox id="jap2ff_lowUser1">          
+                                <checkbox id="lowUserWarn" 
+                                          label="&jap2ff.pref.tabWarn.warnings.label.minUserWarn1;" 
+                                          preference="jap2ff_minUserWarn" 
+                                          tooltiptext="&jap2ff.prev.tooltip.warning.lowUserWarn;"
+                                          />
+		                    </hbox>
+		                    <hbox id="jap2ff_lowUser2">          
+                                <checkbox id="lowUserWarn" 
+                                          label="&jap2ff.pref.tabWarn.warnings.label.minUserWarn2;" 
+                                          preference="jap2ff_minUserWarn" 
+                                          tooltiptext="&jap2ff.prev.tooltip.warning.lowUserWarn;"
+                                          />
+                                <textbox id="minUserCount" 
+		                                 preference="jap2ff_minUserCount" 
+		                                 style="width:50px;"
+		                                 tooltiptext="&jap2ff.prev.tooltip.warning.lowUserCount;"
+		                                 />
+		                        <label value="&jap2ff.pref.tabWarn.warnings.label.minUserWarn3;" 
+		                               style="margin-top:7px;margin-left:4px;"
+		                               tooltiptext="&jap2ff.prev.tooltip.warning.lowUserCount;"
+		                               />         
+		                    </hbox>                                 
+                        </groupbox>
+		        </tabpanel>
+		        <tabpanel orient="vertical">
+                    <groupbox orient="vertical"
+                              id="jap2ff_anonSettingsDetails"
+                              tooltiptext="&jap2ff.prev.tooltip.anonsetting;"  
+                              >
+                            <caption label="&jap2ff.pref.tabAnon.details.label;" />
+                            
+                                    <checkbox id="anonCookies" 
+                                              label="&jap2ff.pref.tabAnon.details.label.cookies;" 
+                                              preference="jap2ff_anonDetailCookie"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsCookies;"
+                                              />
+                                    <checkbox id="anonJavaScript" 
+                                              label="&jap2ff.pref.tabAnon.details.label.javaScript;" 
+                                              preference="jap2ff_anonDetailJavaScript"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsJavaScript;"
+                                              />
+                                    <checkbox id="anonJava" 
+                                              label="&jap2ff.pref.tabAnon.details.label.java;" 
+                                              preference="jap2ff_anonDetailJava"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsJava;"
+                                              />
+                                    <checkbox id="anonRef" 
+                                              label="&jap2ff.pref.tabAnon.details.label.ref;" 
+                                              preference="jap2ff_anonDetailReferers"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsRefs;"
+                                              />
+                            
+                            <hbox>        
+                                    <checkbox id="dummytraffic" 
+                                              label="&jap2ff.pref.tabAnon.details.label.dummytraffic;" 
+                                              preference="jap2ff_sendDummy"
+                                              onclick="jap2ff_setDummy()"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsDummy;"
+                                              />
+		                            <textbox id="dummytrafficTime" 
+		                                     preference="jap2ff_DummyTraffic" 
+		                                     style="width:50px;"
+		                                     tooltiptext="&jap2ff.prev.tooltip.anonsettingsDummyTime;"
+		                                     />
+		                            <label control="dummytrafficTime" 
+		                                   value="&jap2ff.pref.tabAnon.details.label.dummytrafficTime;" 
+		                                   style="padding-top:5px;"
+		                                   tooltiptext="&jap2ff.prev.tooltip.anonsettingsDummyTime;"
+		                                   />
+                                    <checkbox id="dummywhenoff" 
+                                              label="&jap2ff.pref.tabAnon.details.label.dummywhenoff;" 
+                                              preference="jap2ff_DummyWhenOff"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsDummyWhenOff;"
+                                              />                              
+                            </hbox>
+                            <hbox>
+                                   <command id="clickFakeAgentCheckbox" oncommand="jap2ff_clickFakeAgentCheckbox();" />
+                                   <checkbox id="fakeAgentCheckbox"
+                                             label="&jap2ff.pref.tabAnon.details.label.fakeAgent;"
+                                             preference="jap2ff_anonDetailFakeAgent"
+                                             command="clickFakeAgentCheckbox"
+                                             tooltiptext="&jap2ff.prev.tooltip.anonsettingsFakeAgent;"
+                                             />
+                                   <command id="clickFakeAgentType" oncommand="jap2ff_clickFakeAgentType();"/>
+                                   <radiogroup id="fakeAgentType"
+                                               preference="jap2ff_anonDetailFakeAgentType"
+                                               orient="horizontal"
+                                               command="clickFakeAgentType"
+                                               >
+                                       <radio id="anonDetailFakeAgentType1"
+                                              value="0"
+                                              label="&jap2ff.pref.tabAnon.details.label.fakeAgentType0;"
+                                              disabled="true"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsFakeAgentType0;"
+                                              />
+                                       <radio id="anonDetailFakeAgentType2"
+                                              label="&jap2ff.pref.tabAnon.details.label.fakeAgentType1;"
+                                              value="1"
+                                              disabled="true"
+                                              tooltiptext="&jap2ff.prev.tooltip.anonsettingsFakeAgentType1;"                                              
+                                              />          
+                                   </radiogroup>          
+                            </hbox>    
+                        </groupbox> 
+		        </tabpanel>
+		        <tabpanel orient="vertical">
+		            
+		            <broadcasterset>
+                        <broadcaster id="jap2ff_isUseProxyBroadcaster" class="jap2ff_isOn_class"/>
+                    </broadcasterset>
+		            
+		            <groupbox >
+		                <vbox>
+		                    <checkbox id="autorecon" 
+		                              label="&jap2ff.pref.tabKaskade.autorecon.label;" 
+		                              preference="jap2ff_AutoReCon"
+		                              tooltip="&jap2ff.prev.tooltip.cascades.reconnect;"
+		                              />
+		                    <checkbox id="noPayCasc" 
+		                              label="&jap2ff.pref.tabKaskade.noPayCasc.label;" 
+		                              preference="jap2ff_noPayCasc"
+		                              tooltiptext="&jap2ff.prev.tooltip.cascades.noPay;"
+		                              />
+		                </vbox>
+		            </groupbox>
+		            <groupbox orient="vertial">
+		                <caption label="&jap2ff.pref.tabKaskade.proxy.label;"/>
+		                <hbox>
+		                    <checkbox id ="useAnonlibProxy"
+		                              label="&jap2ff.pref.tabKaskade.proxy.label.use;"
+		                              preference="jap2ff_isUseProxy"
+		                              onsynctopreference="jap2ff_anOnIsUseProxyClick()"
+		                              />
+		                </hbox>
+		                <hbox style="margin-left:25px;"
+		                      align="center"
+		                      >
+		                    <label value="&jap2ff.pref.tabKaskade.proxy.label.host;:"
+		                           observes="jap2ff_isUseProxyBroadcaster"
+		                           />
+		                    <textbox style="width:100px;"
+		                             preference="jap2ff_proxyHost"
+		                             observes="jap2ff_isUseProxyBroadcaster"
+		                             />
+		                    <spacer style="width:15px;" />
+		                    <label value="&jap2ff.pref.tabKaskade.proxy.label.port;:"
+		                           observes="jap2ff_isUseProxyBroadcaster" 
+		                           />
+		                    <textbox style="width:40px;"
+		                             preference="jap2ff_proxyPort"
+		                             observes="jap2ff_isUseProxyBroadcaster"
+		                             />         
+		                </hbox>                     
+		            </groupbox>
+		            <!-- tree id="test2" datasources="file:///c://data2.rdf" 
+		                  ref="chrome://jap2ff/content/scripts/database/InfoServices" 
+		                  flex="1" >
+                        <treecols>
+                            <treecol id="testRow" label="Name" flex="1"/>
+                            <treecol id="testRow2" label="leer" flex="2"/>
+                        </treecols>
+                        <template>
+                            <rule>
+                                <conditions>
+                                    <content uri="?start"/>
+                                    <member container="?start" child="?infoS"/>
+                                    <triple subject="?infoS"
+                                            predicate="chrome://jap2ff/content/scripts/database/InfoService#id"
+                                            object="?valueID"/>
+                                </conditions>
+                                <action>
+                                    <treechildren>  
+                                        <treeitem uri="?infoS"> 
+                                            <treerow>
+                                                <treecell label="?valueID"/>
+                                                <treecell label="1"/>
+                                            </treerow>
+                                        </treeitem> 
+                                    </treechildren>  
+                                </action>  
+                            </rule>
+                        </template>    
+                    </tree -->
+                    <!-- vbox id="test2" 
+                          datasources="file:///c://data2.rdf" 
+                          ref="chrome://jap2ff/content/scripts/database/InfoService#80.237.206.62%3A6543"
+                          flex="1"
+                          >
+                          <template>
+                            <rule>
+                                <conditions>
+                                    <content uri="?start"/>
+                                    member container="?start" child="?infoS"/> 
+                                    <triple subject="?start"
+                                            predicate="chrome://jap2ff/content/scripts/database/InfoService#id"
+                                            object="?valueID"/>
+                                </conditions>
+                                <action>
+                                   <hbox uri="?valueID"> 
+                                     <label value="?valueID"/>
+                                     <label value="1"/>
+                                   </hbox> 
+                                </action>  
+                            </rule>
+                        </template>    
+                    </vbox --> 
+		        </tabpanel>
+		        <tabpanel>
+		          <vbox flex="1">
+		            <tree id="jap2ff_infoservice-list" 
+		                  datasources="rdf:null" 
+		                  ref="chrome://jap2ff/content/scripts/database/InfoServices" 
+		                  flex="1" 
+		                  seltype="single"
+  	                  	  hidecolumnpicker="false"
+		                  persist="hidecolumnpicker"
+		                  >
+                        <treecols>
+                            <treecol id="cascName"  
+                                     label="&jap2ff.pref.tabInfoService.label.name;"
+                                     ignoreincolumnpicker="true" 
+                                     flex="5"
+                                     persist="hidden ordinal width"
+                                     />
+                            <splitter class="tree-splitter"/>         
+                            <treecol id="cascHost"  
+                                     label="&jap2ff.pref.tabInfoService.label.host;"
+                                     persist="hidden ordinal width"
+                                     flex="3"
+                                     />
+                            <splitter class="tree-splitter"/>         
+                            <treecol id="cascPorts" 
+                                     label="&jap2ff.pref.tabInfoService.label.ports;" 
+                                     persist="hidden ordinal width"
+                                     flex="2"
+                                     />
+                            <splitter class="tree-splitter"/>
+                            <treecol id="cascId"    
+                                     label="&jap2ff.pref.tabInfoService.label.id;" 
+                                     persist="hidden ordinal width"
+                                     flex="2"
+                                     />
+                        </treecols>
+                        <template>
+                            <rule>
+                                <conditions>
+                                    <content uri="?start"/>
+                                    <member container="?start" child="?infoS"/>
+                                    <triple subject="?infoS"
+                                            predicate="chrome://jap2ff/content/scripts/database/InfoService#id"
+                                            object="?valueID"/>
+                                    <triple subject="?infoS"
+                                            predicate="chrome://jap2ff/content/scripts/database/InfoService#name"
+                                            object="?valueNAME"/>
+                                    <triple subject="?infoS"
+                                            predicate="chrome://jap2ff/content/scripts/database/InfoService#host"
+                                            object="?valueHOST"/>
+                                    <triple subject="?infoS"
+                                            predicate="chrome://jap2ff/content/scripts/database/InfoService#ports"
+                                            object="?valuePORTS"/>        
+                                </conditions>
+                                <action>
+                                    <treechildren>  
+                                        <treeitem uri="?infoS"> 
+                                            <treerow>
+                                                <treecell label="?valueNAME"/>
+                                                <treecell label="?valueHOST"/>
+                                                <treecell label="?valuePORTS"/>
+                                                <treecell label="?valueID"/>
+                                            </treerow>
+                                        </treeitem> 
+                                    </treechildren>  
+                                </action>  
+                            </rule>
+                        </template>    
+                    </tree>
+                    <hbox style="margin-top:8px;margin-bottom:5px;"> 
+		                <button 
+		                        label="&jap2ff.pref.tabInfoService.label.update;" 
+		                        oncommand="jap2ff_getInfoServices();"
+		                        
+		                        />
+		                <button 
+		                        label="&jap2ff.pref.tabInfoService.label.select;" 
+		                        oncommand="jap2ff_selectInfoservice();"
+		                        
+		                        />        
+                                
+		                <spacer flex="3" />        
+		            </hbox>            
+		          </vbox>
+		        </tabpanel>
+		        <tabpanel>
+		        </tabpanel>
+		        <tabpanel orient="vertical"
+		                  style="font-size:10px;">
+		          <!--   <description value="&jap2ff.prev.tabDebug.desc.label;" />  -->
+                    <groupbox orient="horizontal" 
+                              style="padding:1px;padding-bottom:3px;"
+                              tooltiptext="&jap2ff.prev.tooltip.debugType;"
+                              >
+                        <caption label="&jap2ff.prev.tabDebug.debugType.label;"/>
+                        <hbox>
+                            <radiogroup preference="jap2ff_LogType" orient="vertical">
+                              <hbox>
+                                <radio label="&jap2ff.prev.tabDebug.debugType.nul.label;" value="0"/>
+                              </hbox>
+                              <hbox>  
+                                <radio label="&jap2ff.prev.tabDebug.debugType.gui.label;" value="1"/>                               
+                                <radio label="&jap2ff.prev.tabDebug.debugType.net.label;" value="2"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugType.thread.label;" value="4"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugType.misc.label;" value="8"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugType.pay.label;" value="16"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugType.tor.label;" value="32"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugType.crypto.label;" value="64"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugType.all.label;" value="127"/>
+                              </hbox>  
+                            </radiogroup>           
+                        </hbox>
+                    </groupbox>
+                    <groupbox orient="horizontal" style="padding:1px;padding-bottom:3px;">
+                        <caption label="&jap2ff.prev.tabDebug.debugLevel.label;"/>
+                        <hbox>
+                            <radiogroup preference="jap2ff_LogLevel" 
+                                        orient="horizontal"
+                                        tooltiptext="&jap2ff.prev.tooltip.debugLevel;"
+                                        >
+                                <radio label="&jap2ff.prev.tabDebug.debugLevel.error.label;" value="0"/> 
+                                <radio label="&jap2ff.prev.tabDebug.debugLevel.alert.label;" value="1"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugLevel.except.label;" value="2"/>
+                                <!-- <radio label="&jap2ff.prev.tabDebug.debugLevel.err.label;" value="3"/> -->
+                                <radio label="&jap2ff.prev.tabDebug.debugLevel.warn.label;" value="4"/> 
+                                <radio label="&jap2ff.prev.tabDebug.debugLevel.notice.label;" value="5"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugLevel.info.label;" value="6"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugLevel.debug.label;" value="7"/>                                                               
+                            </radiogroup>           
+                        </hbox>      
+                    </groupbox>
+                    <groupbox orient="horizontal" 
+                              style="padding:1px;padding-bottom:3px;"
+                              tooltiptext="&jap2ff.prev.tooltip.debugDetail;"
+                              >
+                        <caption label="&jap2ff.prev.tabDebug.debugDetail.label;"/>
+                        <hbox>
+                            <radiogroup preference="jap2ff_LogDetail" orient="horizontal">
+                                <radio label="&jap2ff.prev.tabDebug.debugDetail.smalest.label;" value="0"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugDetail.smaler.label;" value="1"/> 
+                                <radio label="&jap2ff.prev.tabDebug.debugDetail.high.label;" value="2"/>
+                                <radio label="&jap2ff.prev.tabDebug.debugDetail.highest.label;" value="3"/>
+                            </radiogroup>           
+                        </hbox>
+                    </groupbox>
+                  <groupbox orient="horizontal" 
+                            style="padding:1px;padding-bottom:3px;"
+                            tooltiptext="&jap2ff.prev.tooltip.debugFileGroup;"
+                            >
+                        <caption label="&jap2ff.prev.tabDebug.logFile.label;"/>
+                        <hbox style="vertical-align:middle;">
+		                    <checkbox id="jap2ff_log2file_checkbox" 
+		                              label="&jap2ff.prev.tabDebug.logFile.fileOnOff.label;" 
+		                              preference="jap2ff_Log2File" 
+		                              onclick="jap2ff_checkLogFile()"
+		                              tooltiptext="&jap2ff.prev.tooltip.debugFileCheck;"
+		                              />
+		                    <label control="jap2ff_filename" 
+		                           style="margin-top:7px;" 
+		                           value="&jap2ff.prev.tabDebug.logFile.fileName.label;" 
+		                           tooltiptext="&jap2ff.prev.tooltip.debugFilePlace;"
+		                           />
+		                    <textbox id="jap2ff_filename" 
+		                             preference="jap2ff_LogFile" 
+		                             tooltiptext="&jap2ff.prev.tooltip.debugFilePlace;"
+		                             />
+		                    <button oncommand="jap2ff_setLogFile()" 
+		                            label="Datei auswählen"
+		                            tooltiptext="&jap2ff.prev.tooltip.debugFileSelect;"
+		                            />
+		                </hbox>
+                    </groupbox>
+		        </tabpanel>
+		        
+	            
+	        </tabpanels> 
+	    </tabbox>
+	    <hbox id="jap2ff_reset2default_hbox">
+	          <button label="&jap2ff.prev.reset2defaults.label;" 
+	                  oncommand="jap2ff_reset2defaults()"
+	                  tooltiptext="&jap2ff.prev.tooltip.reset2defaults;"
+	                  /> 
+	          <spacer flex="1"/>         
+	    </hbox>
+	    <vbox id="jap2ff_noJavaPluginPane"
+	          collapsed="true"
+	          style="font-family:arial, sans serif;"
+	          minheight="300px;"
+	          >
+		     <groupbox flex="1" style="text-align:left;border:2px solid red;padding:4px;background-color:white;">   
+			   <description id="noJavaPlugin_0"
+			                style="font-size:14px;"> 
+			                &jap2ff.noJavaPlugin.text_0;
+			   </description>
+			   <description id="noJavaPlugin_1"
+			                style="font-size:14px;margin-top:2px"> 
+			                &jap2ff.noJavaPlugin.text_1;
+			   </description>		   
+			</groupbox>   
+			<spacer flex="1"/>
+		 </vbox>
+	</prefpane>
+</overlay>

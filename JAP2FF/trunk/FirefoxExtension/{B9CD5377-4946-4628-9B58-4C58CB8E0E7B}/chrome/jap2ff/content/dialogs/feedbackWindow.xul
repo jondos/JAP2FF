@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog id="feedBackWin"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         buttons="accept"
+         height="600px"
+         width="750px;"
+         title="&jap2ff.feedback.window.label;"
+         onload="init(this);"
+         style="padding:0px;padding-bottom:15px;"
+         >
+         
+		 <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/feedbackWindow.js"/>
+		 
+		 <vbox class="box-inherit dialog-content-box"
+		       flex="1"
+		       style="background:white;padding:10px;"
+               >
+		     <hbox 
+		              align="center"
+		              flex="1"
+		              >             
+			        <description flex="1" 
+			                     id="feedbackWinDesc"
+                                 style="font-size:+18px;font-weight:bold;font-family:Arial,sans-serif;" 
+			                     >
+			                     &jap2ff.feedbackWin.text.label_0;
+			        </description>             
+			    </hbox>      	 
+		    
+		        <hbox 
+		              align="center"
+		              flex="1"
+		              >             
+			        <description flex="1" 
+			                     id="feedbackWinDesc" 
+                                             style="font-size:+14px;font-family:Arial,sans-serif;"
+			                     >
+			                     &jap2ff.feedbackWin.text.label_1;
+			        </description>             
+			    </hbox>
+			    <hbox 
+		              align="center"
+		              flex="1"
+		              >             
+			        <description flex="1" 
+			                     id="feedbackWinDesc" 
+                                             style="font-size:+14px;font-family:Arial,sans-serif;"
+			                     >
+			                     &jap2ff.feedbackWin.text.label_2;
+			        </description>             
+			    </hbox>
+			    <hbox 
+		              align="center"
+		              flex="1"
+		              >             
+			        <description flex="1" 
+			                     id="feedbackWinDesc" 
+                                             style="font-size:+14px;font-family:Arial,sans-serif;"
+			                     >
+			                     &jap2ff.feedbackWin.text.label_3;
+			        </description>             
+			    </hbox>
+			    <hbox 
+		              align="center"
+		              flex="1"
+		              >             
+			        <description flex="1" 
+			                     id="feedbackWinDesc" 
+                                             style="font-size:+14px;font-family:Arial,sans-serif;"
+			                     >
+			                     &jap2ff.feedbackWin.text.label_4;
+			        </description>             
+			    </hbox>
+			    <hbox 
+		              align="center"
+		              flex="1"
+		              >
+		            <vbox>               
+			        <description id="feedbackWinDesc_5"
+			                     flex="1" 
+			                     value="&jap2ff.feedbackWin.text.label_5;"
+                                 style="font-size:+14px;color:blue;font-family:Arial,sans-serif;"
+			                     >
+			        </description>
+			        <description flex="1" 
+			                     id="feedbackWinDesc" 
+                                 style="font-size:+14px;font-family:Arial,sans-serif;"
+			                     >
+			                     &jap2ff.feedbackWin.text.label_6;
+			        </description>
+			        </vbox>              
+			    </hbox>	    
+			    <hbox 
+		              align="center"
+		              flex="1"
+		              >             
+			        <description flex="1" 
+			                     id="feedbackWinDesc" 
+                                 style="font-size:+12px;font-weight:bold;font-family:Arial,sans-serif;"
+			                     >
+			                     &jap2ff.feedbackWin.text.label_7;
+			        </description>             
+			    </hbox>
+	     </vbox>
+	     <separator class="groove" style="padding:0;margin:0;margin-right:-10px;" />		
+	     <spacer height="10px;"/>
+		 <command id="feedbackWindowShowAgain" oncommand="jap2ff_showAgain();"/>
+		 <checkbox id="feedbackWindowShowAgainCheckbox" 
+			       label="&jap2ff.feedbackWin.again;" 
+			       command="feedbackWindowShowAgain"
+			       style="font-size:12px;font-family:Arial,sans-serif;"
+		           /> 
+	  
+</dialog>

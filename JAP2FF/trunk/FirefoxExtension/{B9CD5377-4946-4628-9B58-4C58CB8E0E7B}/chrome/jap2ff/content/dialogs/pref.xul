@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://mozapps/content/preferences/preferences.css"?>
+<?xml-stylesheet href="chrome://browser/skin/preferences/preferences.css"?>
+
+
+<!DOCTYPE prefwindow [
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+<!ENTITY % preferencesDTD SYSTEM "chrome://browser/locale/preferences/preferences.dtd">
+<!ENTITY % over SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+%brandDTD;
+%preferencesDTD;
+%over;
+]>
+
+<overlay id="jap2ff_PreferencesOverlay"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <prefwindow id="BrowserPreferences"
+                minheight="420px"
+			    minwidth="550px"
+			    maxwidth="600px"
+				style=""
+                >
+         
+        <prefpane id="jap2ffPanePriv" 
+		          label="&jap2ff.prev.project;" 
+                  src="chrome://jap2ff/content/dialogs/jap.xul"
+				  image="chrome://jap2ff/content/icons/icon32.png"/>
+        
+		<!--<prefpane id="jap2ffPanePriv" 
+		          label="Erweiterung" 
+                  src="chrome://jap2ff/content/dialogs/prefExample.xul"
+				  image="chrome://jap2ff/content/icons/icon32.png"/>-->       
+    </prefwindow>
+</overlay>

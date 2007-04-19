@@ -1,0 +1,19 @@
+#
+# Chrome Manifest file (for Firefox 1.1+)
+#
+# WARNING: don't forget the '/' at the end of the paths or it won't work!!
+
+# Overlays
+overlay    chrome://browser/content/browser.xul chrome://jap2ff/content/browser-overlay.xul
+overlay    chrome://browser/content/preferences/preferences.xul chrome://jap2ff/content/dialogs/pref.xul
+
+# Content
+content    jap2ff chrome/jap2ff/content/
+
+# Skin
+skin       jap2ff  classic/1.0  chrome/jap2ff/skin/classic/
+
+# Locale
+locale     jap2ff  en-US  chrome/jap2ff/locale/en-US/
+locale     jap2ff  de-DE  chrome/jap2ff/locale/de-DE/
+

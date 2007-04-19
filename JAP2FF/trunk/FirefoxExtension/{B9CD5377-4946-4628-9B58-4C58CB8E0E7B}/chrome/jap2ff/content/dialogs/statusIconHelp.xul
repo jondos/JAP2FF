@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog id="statusIconHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         buttons="accept"
+         buttonlabelaccept="&jap2ff.statusIconHelp.button;"
+         minwidth="700px"
+         minheight="100px"
+         title="&jap2ff.statusIconHelp.titel.label;"
+         onload="initHelp();"
+         >
+    
+	     <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/statusIconHelp.js"/>
+	                
+                    
+                        
+                        <groupbox 
+                            flex="1"
+                            maxwidth="100%"
+                            minheight="100px"
+                            >
+                            <caption label="&jap2ff.statusIconHelp.symbolBox.label;"/>
+                            <hbox>
+                              <vbox>
+                                  <groupbox id="noAnon" minheight="60px">
+                                      <hbox><spacer flex="1"/><image style="margin-bottom:8px;" src='chrome://jap2ff/content/icons/jap/icon16_off.gif' width="24px" height="24px"/><spacer flex="1"/></hbox>
+                                      <html:div>&jap2ff.statusIconHelp.off_0;<html:br/>&jap2ff.statusIconHelp.off_1;</html:div>
+                                  </groupbox>
+                              </vbox>
+                              <vbox>
+                                  <groupbox id="anonUk">
+                                      <hbox><spacer flex="1"/><image style="margin-bottom:8px;" src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_uk.gif' width="24px" height="24px"/><spacer flex="1"/></hbox>
+                                      <html:div>&jap2ff.statusIconHelp.on;<html:br/>&jap2ff.statusIconHelp.state.unknown;</html:div>
+                                  </groupbox>    
+                              </vbox>
+                              <vbox>
+                                  <groupbox id="anonLow">
+                                  <hbox><spacer flex="1"/><image style="margin-bottom:8px;" src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_red.gif' width="24px" height="24px"/><spacer flex="1"/></hbox>
+                                  <html:div>&jap2ff.statusIconHelp.on;<html:br/>&jap2ff.statusIconHelp.state.low;</html:div>
+                                  </groupbox>
+                              </vbox>
+                              <vbox>
+                                  <groupbox id="anonMiddle">
+                                  <hbox><spacer flex="1"/><image style="margin-bottom:8px;" src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_blue.gif' width="24px" height="24px"/><spacer flex="1"/></hbox>
+                                  <html:div>&jap2ff.statusIconHelp.on;<html:br/>&jap2ff.statusIconHelp.state.middle;</html:div>
+                                  </groupbox>
+                              </vbox>
+                              <vbox>
+                                  <groupbox id="anonHigh">
+                                  <hbox><spacer flex="1"/><image style="margin-bottom:8px;" src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_green.gif' width="24px" height="24px"/><spacer flex="1"/></hbox>
+                                  <html:div>&jap2ff.statusIconHelp.on;<html:br/>&jap2ff.statusIconHelp.state.high;</html:div>
+                                  </groupbox>
+                              </vbox>
+                            </hbox>
+                            <!--<hbox>
+                              <vbox minwidth="103px">                                  
+                              </vbox>
+                              <vbox>
+                                  <groupbox>
+                                  <hbox><spacer flex="1"/><image src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_uk_trans.gif' width="22px" height="22px"/><spacer flex="1"/></hbox>
+                                  <html:div>anonyme Übertragung,<html:br/>unbekanntes Anonymitätslevel</html:div>
+                                  </groupbox>
+                              </vbox>
+                              <vbox>
+                                  <groupbox>
+                                  <hbox><spacer flex="1"/><image src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_red_trans.gif' width="22px" height="22px"/><spacer flex="1"/></hbox>
+                                  <html:div>anonyme Übertragung,<html:br/>unteres Anonymitätslevel</html:div>
+                                  </groupbox>
+                              </vbox>
+                              <vbox>
+                                  <groupbox>
+                                  <hbox><spacer flex="1"/><image src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_blue_trans.gif' width="22px" height="22px"/><spacer flex="1"/></hbox>
+                                  <html:div>anonyme Übertragung,<html:br/>mittleres Anonymitätslevel</html:div>
+                                  </groupbox>
+                              </vbox>
+                              <vbox>
+                                  <groupbox>
+                                  <hbox><spacer flex="1"/><image src='chrome://jap2ff/content/icons/jap/icon16_anonLevel_green_trans.gif' width="22px" height="22px"/><spacer flex="1"/></hbox>
+                                  <html:div>anonyme Übertragung,<html:br/>hohes Anonymitätslevel</html:div>
+                                  </groupbox>
+                              </vbox>
+                            </hbox>-->
+                            <spacer felx="1" height="40px"/>
+                            
+                        </groupbox>
+                        
+                                
+
+	
+
+</dialog>

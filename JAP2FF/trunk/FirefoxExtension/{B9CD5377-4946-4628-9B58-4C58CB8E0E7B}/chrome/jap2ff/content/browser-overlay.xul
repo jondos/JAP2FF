@@ -1,0 +1,563 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://jap2ff/skin/styles/browser-overlay.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+
+<overlay id="jap2ff-browser-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://jap2ff/content/scripts/general.js"/>
+	<script type="application/x-javascript" src="chrome://jap2ff/content/scripts/utils.js"/>
+	<script type="application/x-javascript" src="chrome://jap2ff/content/scripts/database.js"/>
+	<script type="application/x-javascript" src="chrome://jap2ff/content/scripts/AjaxRequestMod.js"/>
+	<script type="application/x-javascript" src="chrome://global/content/strres.js"/>
+
+    <script type="application/x-javascript">
+	    try{
+			window.addEventListener("load", jap2ffGeneral.jap2ff_init , true);
+		}catch(e){
+		    alert('Overlay:'+e);
+		}
+    </script>
+    
+    
+	
+	<!-- URLBar Icon -->
+	<textbox id ="urlbar">
+
+	        <image id="jap2ff-urlbar-icon"
+	               insertbefore="page-proxy-deck"
+	               style="margin-left:2px;"  
+	               src="chrome://jap2ff/content/icons/jap/icon16_off.gif" 
+	               collapsed="false" persist="collapsed"
+	               ondblclick="if (event.button == 0) jap2ff_ShowPref();"	 
+	               onclick="if (event.button==2){jap2ffGeneral.switchOnOff(event);}"   
+	               tooltiptext="&jap2ff.browser.tooltip.urlBarIcon;"
+	               >
+	        </image>       
+	</textbox>
+	
+	
+
+	<!-- Toolbar -->
+	<toolbox id="navigator-toolbox">
+		
+		<command id="jap2ff_onCheckboxCommand" oncommand="jap2ffGeneral.anOnClick()"/>
+		
+		<broadcasterset>
+            <broadcaster id="jap2ff_isAnonOn" class="jap2ff_isOn_class"/>
+        </broadcasterset>
+		
+		<toolbar id="jap2ff-toolbar"
+					context="toolbar-context-menu" 
+					customizable="true" 
+					collapsed="false" persist="collapsed"
+					align="center"
+					toolbarname="&jap2ff.prev.project; Toolbar"
+					class="chromeclass"
+					insertafter="PersonalToolbar"
+					>	
+			
+			<hbox align="left" 
+			      flex="1"
+			      style="margin-right:15px;"
+			      >
+			    <hbox align="center" flex="1">
+			    
+			        <image src="chrome://jap2ff/content/icons/icon32.png"
+			               tooltip="&jap2ff.browser.tooltip.toolbarSymbol;"
+			               width="28"
+			               height="28"
+			               style="margin-left:2px;margin-right:4px;"
+			               />			            
+			    	<checkbox id="jap2ff_onCheckbox"
+			    	          label="&jap2ff.japCheckbox.label;"
+			    	          command="jap2ff_onCheckboxCommand"
+			    	          /> 
+				    
+				    <!-- groupbox orient="horizontal" 
+				              style="padding: 0px;margin:0;border:0;"
+				              align="center" 
+				              tooltiptext="&jap2ff.browser.tooltip.setRemoveGroup;"
+				              >
+					    <groupbox style="border:0px;margin:0px;">
+                            <label id="jap2ff_anon_switch" value="Anonymität:" style="font-weight: bold;border:0px;"/>
+                        </groupbox>
+					    <radiogroup id="jap2ff_proxyOn" 
+					                orient="horizontal" 
+					                align="center"
+					                style="margin:0px;">
+                            <radio id="jap2ff_on"  tooltiptext ="&jap2ff.browser.tooltip.setJAP;" label="&jap2ff.setJAP.label;" onclick="jap2ffGeneral.setJAP(true);"/>
+                            <radio id="jap2ff_off" tooltiptext="&jap2ff.browser.tooltip.removeJAP;" label="&jap2ff.removeJAP.label;" onclick="jap2ffGeneral.removeJAP(true,event);" oncommand="jap2ff_setRadioBack(event);"/> 
+                        </radiogroup>
+				    </groupbox-->
+				    <spacer id="kaskade_label_spacer" width="4" />
+				    <label id="kaskade_label" 
+				           value="&jap2ff.anonService;:" 
+				           style="margin-right: 4px;font-weight:bold;"
+				           observes="jap2ff_isAnonOn"
+				           />
+				    <!-- don't remove this or you have to change all the code where this is required 
+				         begin
+				    -->
+				    <menulist id="kaskade-list"
+				              hidden="true" 
+				              tooltiptext="&jap2ff.browser.tooltip.selectCascade;" 
+				              popup="kaskade-list-popup" 
+				              style="height:20px;"
+				              minwidth="50px;"
+				              maxwidth="300px;"
+				              crop="right"
+				              >	
+					    <menupopup id="kaskade-list-popup" 
+					               position="after_start">
+					        <menuitem label="&jap2ff.anonServiceFirst;" />
+					    </menupopup>
+				    </menulist>
+				    <!-- don't remove this or you have to change all the code where this is required 
+				         end
+				    -->	
+				    <toolbarbutton id="jap2ff_casc-list" 
+				                   tooltiptext="&jap2ff.browser.tooltip.selectCascade;"  
+				                   type="menu" 
+				                   width="10px"
+				                   style="height:20px;margin:0;border:1px solid darkgray;border-right:0;background:white;" 
+				                   
+				                   >
+				        <menupopup id="jap2ff_toolbar-casc-menu-list" 
+					           crop="right"
+					           onpopupshowing="jap2ff_sizePopup(this);"
+					           style="background:white;"
+					           >
+					        <menuitem label="&jap2ff.anonServiceFirst;" />
+	                    </menupopup>               
+				    </toolbarbutton>
+				    				    	        	
+                    <label id="jap2ff_casc-list-label"
+				           value="&jap2ff.anonServiceFirst;"
+				           style="margin-left:0px;padding-left:6px;padding-top:2px;background:white;border:1px solid darkgray;border-left:0;"
+				           tooltiptext="&jap2ff.browser.tooltip.selectCascade;"
+				           height="20px"
+				           minwidth="50px"
+				           maxwidth="450px"
+				           flex="2"
+				           crop="right"
+				           />
+				    
+				    <label id="jap2ff_casc-list-label_message" 
+				           hidden="true"
+				           style="width:0px;margin:0px;padding:0px;"
+				           value="&jap2ff.anonServiceFirstFailure;"
+				           />	
+				    
+				    <image id="jap2ff_reloadCascadesImage"
+				           tooltiptext="&jap2ff.browser.tooltip.cascadeReload;" 
+				           src="chrome://jap2ff/content/icons/reloadCascades/reload.gif"
+				           style="padding:0px;margin:0px;margin-left:0px;margin-right:0px;"
+				           width="18"
+				           height="18"
+				           onmouseout="jap2ffGeneral.reloadCascades(2);"
+				           onmouseover="jap2ffGeneral.reloadCascades(1);"
+				           onclick="jap2ffGeneral.reloadCascades(0);" 
+				           />        			
+				    
+				    <spacer id = "jap2ff_toolbarStateSpacer" width="15" style="padding:1px;" />	
+				    <hbox id="jap2ff_toolbarState" 
+				              tooltiptext="&jap2ff.browser.tooltip.anonlibState;" 
+				              orient="horizontal" 
+				              style="padding: 0;margin:0;border:0;"
+				              align="center"
+				              observes="jap2ff_isAnonOn"
+				              >
+					    <label id="jap2ff_status-label" value="&jap2ff.toolbar.anonlibState;:" style="font-weight: bold;" />
+					    <label id="jap2ff_status-text" style="width:38px;padding-right:2px;" value="&jap2ff.toolbar.anonlibStateStart;" />
+				    </hbox>
+				    <spacer id = "jap2ff_toolbarUserCountSpacer" width="15" style="padding:1px;" />
+				    <hbox id="jap2ff_toolbarUserCount" 
+				              tooltiptext="&jap2ff.browser.tooltip.userCount;" 
+				              orient="horizontal" 
+				              style="padding:0;margin:0;border:0;"
+				              align="center"
+				              observes="jap2ff_isAnonOn"
+				              >
+					    <label id="jap2ff_user-label" value="&jap2ff.toolbar.userCount;:" style="font-weight: bold;" />
+					    <label id="jap2ff_user-text" style="width:26px;text-align:right;" value="&jap2ff.toolbar.userCountStart;" />
+				    </hbox>
+				
+				    <spacer id = "jap2ff_anonmeterSpacer" width="15" />             <!-- width='48' height='32' width='60' height='40' -->
+				    <image id="jap2ff_anonmeter" 
+				           tooltiptext="&jap2ff.browser.tooltip.anonmeter;" 
+				           src="chrome://jap2ff/content/icons/anonmeter/meterD_noBlink.gif" 
+				           width="48" 
+				           height="30"
+				           />
+				    <spacer id = "jap2ff_anonbarSpacer" width="18px" />
+				    <image id="jap2ff_anonbar" 
+				           tooltiptext="&jap2ff.browser.tooltip.anonbar;" 
+				           src="chrome://jap2ff/content/icons/anonbar/anonOff.jpg" 
+				           width="120" 
+				           height="15"/>
+				    <spacer id="jap2ff_anonTextSpacer" width="15" />
+				    <hbox id ="jap2ff_anonTextBox" 
+				              tooltiptext="&jap2ff.browser.tooltip.anontext;" 
+				              orient="horizontal"
+				              align="center"
+				              minwidth="180px" 
+				              style="padding:0;margin:0;border:0;"
+				              observes="jap2ff_isAnonOn"
+				              >
+					    <label id="jap2ff_anonLevel-label" value="&jap2ff.toolbar.anonLevel;:" style="font-weight: bold;" />
+					    <label id="jap2ff_anonlevel-text" 
+						       value="&jap2ff.toolbar.anonLevelStart;" 
+							   minwidth="100px"
+							   />
+				    </hbox>
+			    </hbox>       
+			</hbox>
+			<hbox align="right">
+			    <hbox align="center">
+				    <toolbarbutton id="jap2ff_options-list" 
+				                   tooltiptext="&jap2ff.browser.tooltip.options;" 
+				                   label="&jap2ff.toolbar.options;" 
+				                   type="menu" 
+				                   align="right" 
+				                   image="chrome://jap2ff/content/icons/options.png">
+					    
+					    <menupopup id="jap2ff_menu-list" 
+					               position="after_end"
+					               align="right" 
+                                   >
+					      <menuitem
+                            id          ="jap2ff.toolbar.loadTestSite"
+                            label       ="&jap2ff.loadTestSite.label;"
+                            oncommand   ="jap2ff_loadTestPage();"
+                            tooltiptext ="&jap2ff.browser.tooltip.anontest;"
+                           />	
+				          <menuitem
+                            id          ="jap2ff.menu.pref"
+                            label       ="&jap2ff.settings.label;"
+                            oncommand   ="jap2ff_ShowPref();"
+                            tooltiptext ="&jap2ff.browser.tooltip.prefs;"
+                          />	
+                          <menuseparator />
+                          <menuitem
+				            id          ="jap2ff.menu.helpToolbar"
+				            label       ="&jap2ff.helpToolbar.label;"
+				            oncommand   ="jap2ff_showHelp('toolbarHelp',event,false);"
+				            disabled    ="true"
+				            tooltiptext ="&jap2ff.browser.tooltip.helpToolbar;"
+				          />	       
+				          <menuitem
+                            id          ="jap2ff.menu.about"
+                            label       ="&jap2ff.about.label;"
+                            oncommand   ="jap2ff_ShowAbout();"
+                            tooltiptext ="&jap2ff.browser.tooltip.about;"
+                          />
+                    <!--  <menuitem
+                        
+                        label       ="lowUserWarning"
+                        oncommand   ="jap2ffGeneral.showLowUserWarning();"
+                      />
+                      <menuitem
+                        
+                        label       ="test"
+                        oncommand   ="storeInfoService(123456);"
+                      />
+                      <menuitem
+                        
+                        label       ="test2"
+                        oncommand   ="loadInfoService(123456);"
+                      />
+                      <menuitem
+                        
+                        label       ="test3"
+                        oncommand   ="jap2ff_getInfoService();"
+                      />
+                      <menuitem
+                        
+                        label       ="jap2ff_updateCascadeDB();"
+                        oncommand   ="jap2ff_updateCascadeDB();"
+                      />
+                      <menuitem
+                        
+                        label       ="test5"
+                        oncommand   ="jap2ff_getXMLStatusInfo(1);"
+                      />
+                      <menuitem
+                        
+                        label       ="clearCascades"
+                        oncommand   ="jap2ff_clearCascades(1);"
+                      />
+                      <menuitem
+                        
+                        label       ="jap2ff_loadDB()"
+                        oncommand   ="jap2ff_loadDB();"
+                      />
+                      <menuitem
+                        
+                        label       ="jap2ff_updateCascState()"
+                        oncommand   ="jap2ff_updateCascState();"
+                      />
+                      <menuitem
+                        
+                        label       ="jap2ffGeneral.setInfoService"
+                        oncommand   ="jap2ffGeneral.setInfoService();"
+                      />
+                      <menuitem
+                        
+                        label       ="jap2ff_clearInfoServices()"
+                        oncommand   ="jap2ff_clearInfoServices();"
+                      />
+                      <menuitem
+                        
+                        label       ="jap2ff_getInfoServices()"
+                        oncommand   ="jap2ff_getInfoServices();"
+                      />
+                      <menuitem
+                        
+                        label       ="selectCascadeRow()"
+                        oncommand   ="jap2ff_selectCascadeRow();"
+                      />
+                      <menuitem
+                        
+                        label       =" testRemove()"
+                        oncommand   =" testRemove();"
+                      />
+                      <menuitem 
+                        label       =" noJavaPlugin"
+                        oncommand   ="window.openDialog('chrome://jap2ff/content/dialogs/noJavaPluginHelp.xul','Warning','centerscreen, chrome, modal');"
+                      /> -->
+ 			           </menupopup>
+				    </toolbarbutton>
+			    </hbox>  	
+			</hbox>
+		</toolbar>
+	</toolbox>
+	
+	<!-- Tools Menu -->
+
+    <menupopup id="menu_ToolsPopup">
+	    <menu 
+		    id="jap2ff-tools-menu" 
+			label="&jap2ff.prev.project;"
+			class="menuitem-iconic"
+			insertafter="devToolsSeparator">
+			<menupopup id="jap2ff_menu-list" position="after_start" onpopupshowing="">
+			    <menuitem
+                    id          ="jap2ff.setJAP.menu"
+                    label       ="&jap2ff.setJAP.label;"
+                    oncommand   ="jap2ffGeneral.setJAP(true);"
+                    tooltiptext ="&jap2ff.browser.tooltip.setJAP;"
+                    />
+		        <menuitem
+                    id          ="jap2ff.removeJAP.menu"
+                    label       ="&jap2ff.removeJAP.label;"
+                    oncommand   ="jap2ffGeneral.removeJAP(true);"
+                    tooltiptext="&jap2ff.browser.tooltip.removeJAP;"
+                    />
+                <menuseparator id="jap2ff_toolsmenuSeparator_1" />    
+				<menu 
+		            id="jap2ff_menu-kask-menu" 
+			        label="&jap2ff.anonService;"
+			        class="menuitem-iconic"
+			        disabled="false"
+			        tooltiptext="&jap2ff.browser.tooltip.selectCascade;"
+			        >
+			        <menupopup id="jap2ff_menu-kasc-menu-list" position="after_start" onpopupshowing="">
+			            <menuitem label="&jap2ff.anonServiceFirst;" />
+			        </menupopup>
+				</menu>
+				<menuitem
+                   id          ="jap2ff.menu.loadTestSite"
+                   label       ="&jap2ff.loadTestSite.label;"
+                   oncommand   ="jap2ff_loadTestPage();"
+                   tooltiptext ="&jap2ff.browser.tooltip.anontest;"
+                />	
+				<menuitem
+                    id          ="jap2ff.menu.pref"
+                    label       ="&jap2ff.settings.label;"
+                    oncommand   ="jap2ff_ShowPref();"
+                    tooltiptext ="&jap2ff.browser.tooltip.prefs;"
+                    />
+				<menuseparator />		
+				<menuitem
+                    id          ="jap2ff.menu.about"
+                    label       ="&jap2ff.about.label;"
+                    oncommand   ="jap2ff_ShowAbout();"
+                    tooltiptext ="&jap2ff.browser.tooltip.about;"
+                    />
+                <menuitem
+                    id          ="jap2ff.menu.noJavaPluginHelp"
+                    collapsed   ="true"
+                    label       ="&jap2ff.noJavaPluginHelp.label;"
+                    oncommand   ="window.openDialog('chrome://jap2ff/content/dialogs/noJavaPluginHelp.xul','Warning','centerscreen, chrome, modal');"
+                    tooltiptext ="&jap2ff.browser.tooltip.noJavaPlugin;"
+                    />    		
+			</menupopup>
+		</menu>
+    </menupopup>
+	
+	<!-- Status Bar -->
+	<statusbar id="status-bar">        
+        <statusbarpanel
+            id="jap2ff-panel" 
+			collapsed="true" persist="collapsed"
+			ondblclick="if (event.button == 0) jap2ff_ShowPref();"			
+			context="_child"
+			maxwidth="16px"
+			>
+			<image id="jap2ff-panel-icon"  src="chrome://jap2ff/content/icons/jap/icon16_off.gif" class="statusbarpanel-menu-icon" />
+			<menupopup id="jap2ff_options-popup" position="before_end"> <!-- position="start_after" -->
+			    <menuitem id="setJAP" 
+			              label="&jap2ff.setJAP.label;" 
+			              oncommand="jap2ffGeneral.setJAP(true);"
+			              tooltiptext ="&jap2ff.browser.tooltip.setJAP;"
+			              />
+   			    <menuitem id="removeJAP" 
+   			              label="&jap2ff.removeJAP.label;" 
+   			              oncommand="jap2ffGeneral.removeJAP(true);"
+   			              tooltiptext="&jap2ff.browser.tooltip.removeJAP;"
+   			              />
+   			    <menuseparator />
+			    <menu 
+		            id="jap2ff_statusbar-kask-menu" 
+			        label="&jap2ff.anonService;"
+			        class="menuitem-iconic"
+			        disabled="false"
+			        tooltiptext="&jap2ff.browser.tooltip.selectCascade;"
+			        >
+			        <menupopup id="jap2ff_statusbar-kask-menu-list" position="after_start" onpopupshowing="">
+			            <menuitem label="&jap2ff.anonServiceFirst;" />
+			        </menupopup>
+				</menu>
+			    <menuitem
+                   id          ="jap2ff.status.loadTestSite"
+                   label       ="&jap2ff.loadTestSite.label;"
+                   oncommand   ="jap2ff_loadTestPage();"
+                   tooltiptext ="&jap2ff.browser.tooltip.anontest;"
+                />	
+			    <menuitem
+                   id          ="jap2ff.menu.pref"
+                   label       ="&jap2ff.settings.label;"
+                   oncommand   ="jap2ff_ShowPref();"
+                   tooltiptext ="&jap2ff.browser.tooltip.prefs;"
+                />	
+			    <menuseparator />
+			    <menuitem
+				        id          ="jap2ff.menu.helpToolbar"
+				        label       ="&jap2ff.helpStatebar.label;"
+				        oncommand   ="jap2ff_showHelp('statusbarIcon',event, false);"
+				        tooltiptext ="&jap2ff.browser.tooltip.helpStatusbar;"
+				        />		
+			    <menuitem
+                   id          ="jap2ff.menu.about"
+                   label       ="&jap2ff.about.label;"
+                   oncommand   ="jap2ff_ShowAbout();"
+                   tooltiptext ="&jap2ff.browser.tooltip.about;"
+                   />                  
+			</menupopup>			
+		</statusbarpanel>		
+    </statusbar>
+    
+     
+   
+	
+    
+
+    <!-- Context Menu -->
+	<popup id="contentAreaContextMenu">
+	    <menuseparator id="jap2ff-context-separator"/>
+		<menu label="&jap2ff.prev.project;" 
+		      id="jap2ff-context-menu"
+		      collapsed="true" persist="collapsed"
+			>
+			<menupopup position="after_start" onpopupshowing="">
+	            <menuitem
+                    id          ="jap2ff.setJAP.context"
+                    label       ="&jap2ff.setJAP.label;"
+                    oncommand   ="jap2ffGeneral.setJAP(true);"
+                    tooltiptext ="&jap2ff.browser.tooltip.setJAP;"
+                    />
+		        <menuitem
+                    id          ="jap2ff.removeJAP.context"
+                    label       ="&jap2ff.removeJAP.label;"
+                    oncommand   ="jap2ffGeneral.removeJAP(true);"
+                    tooltiptext="&jap2ff.browser.tooltip.removeJAP;"
+                    />
+		        <menuseparator />
+		        <menu 
+		            id="jap2ff-kask-context" 
+			        label="&jap2ff.anonService;"
+			        class="menuitem-iconic"
+			        disabled="false"
+			        tooltiptext="&jap2ff.browser.tooltip.selectCascade;"
+			        >
+			        <menupopup id="jap2ff_context-kask-menu-list" position="after_start" onpopupshowing="">
+			            <menuitem label="&jap2ff.anonServiceFirst;" />
+			        </menupopup>
+				</menu>
+				<menuitem
+                   id          ="jap2ff.context.loadTestSite"
+                   label       ="&jap2ff.loadTestSite.label;"
+                   oncommand   ="jap2ff_loadTestPage();"
+                   tooltiptext ="&jap2ff.browser.tooltip.anontest;"
+                />		
+		        <menuitem
+                    id          ="jap2ff.menu.pref"
+                    label       ="&jap2ff.settings.label;"
+                    oncommand   ="jap2ff_ShowPref();"
+                    tooltiptext ="&jap2ff.browser.tooltip.prefs;"
+                    />
+		        <menuseparator />		
+				<menuitem
+                    id          ="jap2ff.menu.about"
+                    label       ="&jap2ff.about.label;"
+                    oncommand   ="jap2ff_ShowAbout();"
+                    tooltiptext ="&jap2ff.browser.tooltip.about;"
+                    />
+            </menupopup>
+		</menu>
+	</popup>
+	
+	<!-- Menu Example  -->
+	<!--<menubar id="main-menubar">
+	    <menu label="Erweiterungsmenü"
+		      id="test"
+			  class="menuitem-non-iconic"
+			  >
+			  <menupopup id="testPopup"
+						 >
+			      <menuitem id="testid"
+				            label="Menüeintrag 1" />
+				  <menuitem id="testid"
+				            label="Menüeintrag 2" />
+                                       <menuitem id="testid"
+				            label="Menüeintrag 3" />							
+			  </menupopup>
+		</menu>
+	</menubar>-->
+	
+	<!-- Example Toolsmenu -->    
+	<!--	<menu label="Erweiterungsmenü"
+		      id="test"
+			  class="menuitem-non-iconic"
+			  insertafter="devToolsSeparator"
+			  >
+			  <menupopup id="testPopup"
+						 >
+			      <menuitem id="testid"
+				            label="Menüeintrag 1" 
+							class="menuitem-non-iconic"
+							/>
+				  <menuitem id="testid"
+				            label="Menüeintrag 2" 
+							class="menuitem-non-iconic"
+							/>
+                  <menuitem id="testid"
+				            label="Menüeintrag 3" 
+							class="menuitem-non-iconic"
+							/>							
+			  </menupopup>
+		</menu>-->
+
+</overlay>
