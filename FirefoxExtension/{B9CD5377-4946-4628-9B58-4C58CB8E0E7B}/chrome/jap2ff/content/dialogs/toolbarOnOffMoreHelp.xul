@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<prefwindow id="toolbarHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         type="prefwindow"
+         buttons="accept"
+         minwidth="650px"
+         minheight="400px"
+         title="&jap2ff.toolbarOnOffMoreHelp.titel.label;"
+         >
+         
+         <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/utils.js"/>
+         
+    <prefpane 
+        id="toolbarOnOffPane"
+        minwidth="90%"
+        minheight="90%"
+        >
+	  
+	      
+                    
+                        
+                        <groupbox 
+                            flex="1"
+                            minwidth="100%"
+                            minheight="250px"
+                            >
+                            <caption label="&jap2ff.toolbarOnOffMoreHelp.symbolBox.label;"/>
+                            <vbox>
+                                <description>
+                                    Über den den "Ein-/Ausschalter" wird der Anonymitätsmodus aktiviert bzw. deaktiviert.
+                                </description>
+                                <description>
+                                    Beim aktivieren wird automatisch sichergestellt, dass das Anonymitätsmodul gestartet wird / wurde und die 
+                                    Proxyeinstellungen in den Firefoxoptionen die richtigen Einstellgungen erhalten.
+                                </description>
+                                <description>
+                                    Wird der Anonymitätsmodus deaktiviert, werden die Einstellungen für den Proxy wieder (noch) auf die alten (direkt)
+                                    Werte zurück gesetzt.
+                                </description>
+                            </vbox>    
+                            
+                            
+                        </groupbox>
+                        
+                                
+
+	</prefpane>
+
+</prefwindow>

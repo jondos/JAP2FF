@@ -1,0 +1,344 @@
+<!-- Browserwindow -->
+
+<!ENTITY jap2ff.japCheckbox.label     "anonymisiert Surfen">
+<!ENTITY jap2ff.setJAP.label          "anonymisiert">
+<!ENTITY jap2ff.removeJAP.label       "nicht anonymisiert">
+<!ENTITY jap2ff.about.label           "Über...">
+<!ENTITY jap2ff.noJavaPluginHelp.label "Plugin Hilfe">
+<!ENTITY jap2ff.settings.label        "Einstellungen">
+<!ENTITY jap2ff.anonService "AN.ON-Server">
+<!ENTITY jap2ff.anonServiceFirst "laden ...">
+<!ENTITY jap2ff.anonServiceFirstFailure "Fehler! Bitte später nochmal versuchen!">
+
+<!ENTITY jap2ff.toolbar.anonlibState "Status">
+<!ENTITY jap2ff.toolbar.anonlibStateStart "n.a.">
+<!ENTITY jap2ff.toolbar.userCount "Nutzerzahl">
+<!ENTITY jap2ff.toolbar.userCountStart "n.a.">
+<!ENTITY jap2ff.toolbar.anonLevel "Anonymitätslevel">
+<!ENTITY jap2ff.toolbar.anonLevelStart "n.a.">
+<!ENTITY jap2ff.toolbar.options "Optionen">
+
+<!ENTITY jap2ff.helpToolbar.label     "Hilfe Toolbar">
+<!ENTITY jap2ff.loadTestSite.label    "Anon Test">
+
+<!ENTITY jap2ff.helpStatebar.label     "Hilfe Symbole">
+
+<!-- Prev Window -->
+
+<!ENTITY jap2ff.prev.project "AN.ON">
+
+<!ENTITY jap2ff.prev.reset2defaults.label "Einstellungen zurücksetzen...">
+
+<!ENTITY jap2ff.prev.tabGeneral.label "Allgemein">
+<!ENTITY jap2ff.prev.tabGeneral.Userlevel.label "Benutzerkenntnisse">
+<!ENTITY jap2ff.prev.tabGeneral.Userlevel.beginner.label "Anfänger">
+<!ENTITY jap2ff.prev.tabGeneral.Userlevel.normal.label "Fortgeschrittener">
+<!ENTITY jap2ff.prev.tabGeneral.Userlevel.expert.label "Experte">
+<!ENTITY jap2ff.prev.tabGeneral.UserLevelDescr "Durch Wechsel der Benutzerkenntnisse kann die Anzahl der Optionen schrittweise erweitert werden.">
+
+<!ENTITY jap2ff.prev.tabGeneral.GUI.label "Elemente">
+<!ENTITY jap2ff.prev.tabGeneral.GUI.label.urlBarIcon "Adressleisten Icon">
+<!ENTITY jap2ff.prev.tabGeneral.GUI.label.toolbar "Toolbar">
+<!ENTITY jap2ff.prev.tabGeneral.GUI.label.statusbarIcon "Statusbar Icon">
+<!ENTITY jap2ff.prev.tabGeneral.GUI.label.contextMenu "Contextmenü">
+<!ENTITY jap2ff.prev.tabGeneral.proxy.label "Starteinstellungen">
+<!ENTITY jap2ff.prev.tabGeneral.proxy.label.normal "Startet mit dem Verbindungsmodus vom letzten Beenden">
+<!ENTITY jap2ff.prev.tabGeneral.proxy.label.always "Startet immer im anonymisierten Modus">
+<!ENTITY jap2ff.prev.tabGeneral.proxy.label.saveMem "Startet den lokalen Teil von &jap2ff.prev.project; bei Bedarf (erste anonymisierte Verbindung)">
+
+<!ENTITY jap2ff.prev.tabToolbar.label "Toolbar">
+<!ENTITY jap2ff.prev.tabToolbar.showToolbar.label "Toolbar anzeigen">
+<!ENTITY jap2ff.pref.tabToolbar.toolbarElements.label "Toolbarelemente">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarElements.label.anonlibState "&jap2ff.toolbar.anonlibState;">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarElements.label.userCount "&jap2ff.toolbar.userCount;">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarElements.label.anonmeter "Anonmeter">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarElements.label.anonbar "Anonbar">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarElements.label.anontext "&jap2ff.toolbar.anonLevel;">
+
+<!ENTITY jap2ff.pref.tabToolbar.toolbarElementsAnon.label "Toolbaranzeige für &jap2ff.toolbar.anonLevel;">
+<!ENTITY jap2ff.pref.tabToolbar.toolbarElementsAnonmeter "&jap2ff.prev.tabToolbar.toolbarElements.label.anonmeter;">
+<!ENTITY jap2ff.pref.tabToolbar.toolbarElementsAnonbar "&jap2ff.prev.tabToolbar.toolbarElements.label.anonbar;">
+<!ENTITY jap2ff.pref.tabToolbar.toolbarElementsAnonNone "nicht anzeigen">
+<!ENTITY jap2ff.pref.tabToolbar.toolbarElementsAnontext "Textform">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarElementsAnonmeter "&jap2ff.prev.tabToolbar.toolbarElements.label.anonmeter;">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarElementsAnonbar "&jap2ff.prev.tabToolbar.toolbarElements.label.anonbar;">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarRefresh.label "Toolbar - Aktualisierungsoption">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarRefresh.option "Anzeigen nur bei anonymisiertem Surfen erneuern">
+<!ENTITY jap2ff.prev.tabToolbar.toolbarRefresh.optionAllways "Immer">
+
+
+<!ENTITY jap2ff.pref.tabWarn.label "Warnungen">
+<!ENTITY jap2ff.pref.tabWarn.warnings.label "Wählen Sie die Warnungen die Sie erhalten möchten">
+<!ENTITY jap2ff.pref.tabWarn.warnings.label.directWarn "vor nichtanonymen Surfen warnen">
+<!ENTITY jap2ff.pref.tabWarn.warnings.label.switchMode "vor dem Wechsel zu &quot;nicht anonymen Surfen&quot; warnen">
+<!ENTITY jap2ff.pref.tabWarn.warnings.label.minUserWarn1 "warnen bei zu wenigen Nutzern">
+<!ENTITY jap2ff.pref.tabWarn.warnings.label.minUserWarn2 "warnen bei weniger als">
+<!ENTITY jap2ff.pref.tabWarn.warnings.label.minUserWarn3 "Nutzern">
+
+<!ENTITY jap2ff.pref.tabAnon.label "Anonymisierung">
+<!ENTITY jap2ff.pref.tabAnon.details.label "Einstellungen für anonymisierte Verbindungen">
+<!ENTITY jap2ff.pref.tabAnon.details.label.cookies "keine Cookies">
+<!ENTITY jap2ff.pref.tabAnon.details.label.javaScript "kein JavaScript">
+<!ENTITY jap2ff.pref.tabAnon.details.label.java "kein Java">
+<!ENTITY jap2ff.pref.tabAnon.details.label.ref "keine Referers">
+<!ENTITY jap2ff.pref.tabAnon.details.label.fakeAgent "Browsername verändern">
+<!ENTITY jap2ff.pref.tabAnon.details.label.fakeAgentType0 "IE6.0 Win2k">
+<!ENTITY jap2ff.pref.tabAnon.details.label.fakeAgentType1 "IE6.0 WinXP">
+<!ENTITY jap2ff.pref.tabAnon.details.label.dummytraffic "Dummy Traffic">
+<!ENTITY jap2ff.pref.tabAnon.details.label.dummytrafficTime "ms">
+<!ENTITY jap2ff.pref.tabAnon.details.label.dummywhenoff "egal ob Anon. ein">
+
+<!ENTITY jap2ff.pref.tabKaskade.label "&jap2ff.anonService;">
+<!ENTITY jap2ff.pref.tabKaskade.autorecon.label "autom. Wiederverbinden">
+<!ENTITY jap2ff.pref.tabKaskade.noPayCasc.label "nur kostenlose &jap2ff.anonService;">
+<!ENTITY jap2ff.pref.tabKaskade.proxy.label "Proxy">
+<!ENTITY jap2ff.pref.tabKaskade.proxy.label.use "HTTP Proxy nutzen">
+<!ENTITY jap2ff.pref.tabKaskade.proxy.label.host "Host">
+<!ENTITY jap2ff.pref.tabKaskade.proxy.label.port "Port">
+
+<!ENTITY jap2ff.pref.tabInfoService.label "InfoService">
+<!ENTITY jap2ff.pref.tabInfoService.label.name "Name">
+<!ENTITY jap2ff.pref.tabInfoService.label.host "Host">
+<!ENTITY jap2ff.pref.tabInfoService.label.ports "Ports">
+<!ENTITY jap2ff.pref.tabInfoService.label.id "Id">
+<!ENTITY jap2ff.pref.tabInfoService.label.update "neu laden ...">
+<!ENTITY jap2ff.pref.tabInfoService.label.select "Auswahl übernehmen">
+
+<!ENTITY jap2ff.pref.tabKonto.label "Kontoeinstellungen">
+
+<!ENTITY jap2ff.prev.tabHelpWindow.label "Hilfefenster">
+<!ENTITY jap2ff.prev.tabHelpWindow.statusbarIcon.label "Statusleistensymbol">
+<!ENTITY jap2ff.prev.tabHelpWindow.statusbarIconButton.label "Statusleisten Hilfe zeigen">
+<!ENTITY jap2ff.prev.tabHelpWindow.toolbar.label "Toolbarsymbole">
+<!ENTITY jap2ff.prev.tabHelpWindow.toolbarButton.label "Toolbar Hilfe zeigen">
+
+<!ENTITY jap2ff.prev.tabHelpWindow.toolbarOnOffButton.label "vertiefen ...">
+
+<!ENTITY jap2ff.prev.tabDebug.label "Loggin">
+<!ENTITY jap2ff.prev.tabDebug.desc.label "Anon Proxy Log Einstellungen">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.label "Anon-Lib Log Level">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.error.label "ERROR">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.alert.label "ALERT">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.except.label "EXCEPT.">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.err.label "ERR">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.warn.label "WARN">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.notice.label "NOTICE">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.info.label "INFO">
+<!ENTITY jap2ff.prev.tabDebug.debugLevel.debug.label "DEBUG">
+
+<!ENTITY jap2ff.prev.tabDebug.debugType.label "Anon-Lib Log Type">
+<!ENTITY jap2ff.prev.tabDebug.debugType.all.label "ALL">
+<!ENTITY jap2ff.prev.tabDebug.debugType.crypto.label "CRYPTO">
+<!ENTITY jap2ff.prev.tabDebug.debugType.tor.label "TOR">
+<!ENTITY jap2ff.prev.tabDebug.debugType.pay.label "PAY">
+<!ENTITY jap2ff.prev.tabDebug.debugType.misc.label "MISC">
+<!ENTITY jap2ff.prev.tabDebug.debugType.thread.label "THREAD">
+<!ENTITY jap2ff.prev.tabDebug.debugType.net.label "NET">
+<!ENTITY jap2ff.prev.tabDebug.debugType.gui.label "GUI">
+<!ENTITY jap2ff.prev.tabDebug.debugType.nul.label "OFF">
+
+<!ENTITY jap2ff.prev.tabDebug.debugDetail.label "Anon-Lib Log Detail">
+<!ENTITY jap2ff.prev.tabDebug.debugDetail.highest.label "Highest">
+<!ENTITY jap2ff.prev.tabDebug.debugDetail.high.label "High">
+<!ENTITY jap2ff.prev.tabDebug.debugDetail.smaler.label "Lower">
+<!ENTITY jap2ff.prev.tabDebug.debugDetail.smalest.label "Lowest">
+
+
+<!ENTITY jap2ff.prev.tabDebug.logFile.label "Anon-Lib Log File">
+<!ENTITY jap2ff.prev.tabDebug.logFile.fileOnOff.label "Loggen in Datei">
+<!ENTITY jap2ff.prev.tabDebug.logFile.fileName.label "Ziel:">
+
+<!ENTITY jap2ff.prev.tabNoPluginInfo.label "Info">
+
+<!-- statusIcon help window  -->
+
+<!ENTITY jap2ff.statusIconHelp.titel.label "Hilfe Symbole">
+<!ENTITY jap2ff.statusIconHelp.symbolBox.label "Symbolerläuterung">
+<!ENTITY jap2ff.statusIconHelp.off_0 "direkte Verbindung,">
+<!ENTITY jap2ff.statusIconHelp.off_1 "keine Anonymisierung">
+<!ENTITY jap2ff.statusIconHelp.on "anonymisierte Verbindung,">
+<!ENTITY jap2ff.statusIconHelp.state.unknown "unbekanntes &jap2ff.toolbar.anonLevel;">
+<!ENTITY jap2ff.statusIconHelp.state.low "niedriges &jap2ff.toolbar.anonLevel;">
+<!ENTITY jap2ff.statusIconHelp.state.middle "faires &jap2ff.toolbar.anonLevel;">
+<!ENTITY jap2ff.statusIconHelp.state.high "hohes &jap2ff.toolbar.anonLevel;">
+<!ENTITY jap2ff.statusIconHelp.button "Schließen">
+
+<!-- lowUserWarn Window -->
+
+<!ENTITY jap2ff.lowUserWarn.window.label "Warnung">
+<!ENTITY jap2ff.lowUserWarn.accept.label "automatischer Wechsel">
+<!ENTITY jap2ff.lowUserWarn.cancel.label "manueller Wechsel">
+<!ENTITY jap2ff.lowUserWarn.extra1.label "Schwelle anpassen">
+<!ENTITY jap2ff.lowUserWarn.extra2.label "Ignorieren">
+<!ENTITY jap2ff.lowUserWarn.warn "Die Grenze an Benutzern wird von der aktuell gewählten &jap2ff.anonService; unterschritten!">
+<!ENTITY jap2ff.lowUserWarn.again "Warnung wieder anzeigen">
+<!ENTITY jap2ff.lowUserWarn.text1 "bei weniger als">
+<!ENTITY jap2ff.lowUserWarn.text2 "Benutzern">
+
+<!-- about Window -->
+<!ENTITY jap2ff.about.accept.label "Schließen">
+
+<!-- warningOnOff -->
+<!ENTITY jap2ff.warnOff.window.label "Warnung">
+<!ENTITY jap2ff.warnOff.accept.label "Weiter">
+<!ENTITY jap2ff.warnOff.cancel.label "Abbrechen">
+<!ENTITY jap2ff.warnOff.text.label "Wollen Sie wirklich &quot;nicht anonym&quot; weiter Surfen?">
+<!ENTITY jap2ff.warnOff.again.label "Warnung wieder anzeigen">
+
+<!-- warnDirectLoad -->
+<!ENTITY jap2ff.warnDirect.window.label "Warnung">
+<!ENTITY jap2ff.warnDirect.accept.label "Weiter">
+<!ENTITY jap2ff.warnDirect.cancel.label "Abbrechen">
+<!ENTITY jap2ff.warnDirect.text.label "Wollen Sie diese Seite wirklich &quot;nicht anonymisiert&quot; laden?">
+<!ENTITY jap2ff.warnDirect.again.label "Warnung wieder anzeigen">
+
+<!-- noJavaHelp -->
+<!ENTITY jap2ff.noJava.window.label "Info">
+<!ENTITY jap2ff.noJava.extra1.label "Java aktivieren und beenden ...">
+<!ENTITY jap2ff.noJava.text.label "Bitte aktivieren Sie Java und Starten Sie anschließend Firefox neu!">
+
+
+<!-- noJavaPlugin -->
+<!ENTITY jap2ff.noJavaPlugin.window.label "Info">
+<!ENTITY jap2ff.noJavaPlugin.text_0 "Beim Start von Java ist ein Fehler aufgetreten!">
+<!ENTITY jap2ff.noJavaPlugin.text_1 "Bitte prüfen Sie, ob Java 1.3 oder höher und das entsprechende JAVA Plug-in für Ihren Browser installiert sind!">
+<!ENTITY jap2ff.noJavaPlugin.text_2 "Sollten Sie Java und/oder das Java Browser Plug-in benötigen können sie es über folgenden Link herunterladen.">
+<!ENTITY jap2ff.noJavaPlugin.text_3 "Für das Plug-in laden Sie bitte ebenfalls ein Java-Programmpakt herunter und wählen Sie bei der Installation, Ihren Browser für das Einfügen des Plug-ins aus.">
+<!ENTITY jap2ff.noJavaPlugin.text_4 "Alternativ können Sie auch ein bereits vorhandenes Java-Programmpaket erneut installieren und dabei die Auswahl für die Plug-in Integration treffen.">
+<!ENTITY jap2ff.noJavaPlugin.text_5 "Weiter Hilfe können Sie ebenfalls in userem Forum erhalten.">
+<!ENTITY jap2ff.noJavaPlugin.button.text "Plugins anzeigen ...">
+
+
+<!-- toolbar help window -->
+
+<!ENTITY jap2ff.toolbarHelp.titel.label "Hilfe Toolbar-Elemente">
+<!ENTITY jap2ff.toolbarHelp.symbolBox.label "">
+
+<!ENTITY jap2ff.toolbarOnOffMoreHelp.titel.label "Schalter Element">
+<!ENTITY jap2ff.toolbarOnOffMoreHelp.symbolBox.label "Erklärung:">
+
+<!-- Browser Window Tooltips -->
+
+<!ENTITY jap2ff.browser.tooltip.urlBarIcon "Context-Klick um zwischen Anonymisiert und nicht Anonymisiert zu wechseln">
+<!ENTITY jap2ff.browser.tooltip.toolbarSymbol "&jap2ff.prev.project; Toolbar">
+<!ENTITY jap2ff.browser.tooltip.setRemoveGroup "Wählen Sie zwichen anonymisiertem und nicht anonymisierten Surfen">
+<!ENTITY jap2ff.browser.tooltip.setJAP "Verbindung über AN.ON Server">
+<!ENTITY jap2ff.browser.tooltip.removeJAP "Nicht anonymisierte Verbindung">
+<!ENTITY jap2ff.browser.tooltip.selectCascade "Wählen Sie einen &jap2ff.anonService;">
+<!ENTITY jap2ff.browser.tooltip.cascadeReload "Aktualisieren der &jap2ff.anonService; Liste">
+<!ENTITY jap2ff.browser.tooltip.anonlibState "Zeigt den Status des Anonproxys auf Ihrem Rechner an">
+<!ENTITY jap2ff.browser.tooltip.userCount "Eine höhere Zahl ist besser">
+<!ENTITY jap2ff.browser.tooltip.anonmeter "Zeigt den relativen Grad der Anonymisierung an, je weiter rechts desto besser">
+<!ENTITY jap2ff.browser.tooltip.anonbar "Zeigt den relativen Grad der Anonymisierung an, je mehr Füllung desto besser">
+<!ENTITY jap2ff.browser.tooltip.anontext "Zeigt den relativen Grad der Anonymisierung des aktuellen &jap2ff.anonService;s an">
+<!ENTITY jap2ff.browser.tooltip.options "Öffnet das Optionsmenu">
+<!ENTITY jap2ff.browser.tooltip.anontest "Testen Sie was ein Webserver über Sie erfährt">
+<!ENTITY jap2ff.browser.tooltip.prefs "Hier finden Sie die Einstellungsmöglichkeiten">
+<!ENTITY jap2ff.browser.tooltip.helpToolbar "Öffnet eine Hilfe mit detailierten Erklärungen zu den Toolbarelementen">
+<!ENTITY jap2ff.browser.tooltip.about "Informationen über das Projekt">
+<!ENTITY jap2ff.browser.tooltip.helpStatusbar "Hilfe zur Bedeutung der Statusbaricons">
+<!ENTITY jap2ff.browser.tooltip.noJavaPlugin "Öffnet das Hinweisfenster mit Links zu Java und dem Forum">
+
+<!-- Prev Window Tooltips -->
+
+<!ENTITY jap2ff.prev.tooltip.reset2defaults "setzt alle Einstellungen von &jap2ff.prev.project; zurück">
+
+<!ENTITY jap2ff.prev.tooltip.userSkillGroup "hier können stufenweise mehr Einstellungsmöglichkeiten frei geschalten werden">
+<!ENTITY jap2ff.prev.tooltip.userSkillBeginner "minimale Anzahl von Optionen, Maximum an Automatisierung">
+<!ENTITY jap2ff.prev.tooltip.userSkillNormal "mehr Optionen, manuelle AN.ON Server Auswahl, Wahl von Anzeigen im Toolbar">
+<!ENTITY jap2ff.prev.tooltip.userSkillExpert "maximale Anzahl von Optionen">
+
+<!ENTITY jap2ff.prev.tooltip.elementsGroup "Auswahl der Anzeigeelemente von &jap2ff.prev.project; im Browserfenster">
+<!ENTITY jap2ff.prev.tooltip.elementsUrlBarIcon "ein Statusinfosymbol links in der Adressleiste">
+<!ENTITY jap2ff.prev.tooltip.elementsToolbar "ein Element zur Steuerung von &jap2ff.prev.project; im oberen Bereich des Browserfensters">
+<!ENTITY jap2ff.prev.tooltip.elementsStatusbarIcon "ein Statusinfosymbol in der rechten unteren Ecke des Browserfensters">
+<!ENTITY jap2ff.prev.tooltip.elementsContextMenu "ermöglicht die Steuerung über das Contextmenü">
+
+<!ENTITY jap2ff.prev.tooltip.startOptionsGroup "Wählen Sie wie sich &jap2ff.prev.project; beim Browserstart verhalten soll">
+<!ENTITY jap2ff.prev.tooltip.startOptionsNormal "&jap2ff.prev.project; startet im letzten Betriebszustand">
+<!ENTITY jap2ff.prev.tooltip.startOptionsAlways "verlänget den Browserstart etwas">
+<!ENTITY jap2ff.prev.tooltip.startOptionsSaveMem "wirkt nur beim Start ohne Anonymisierung, spart Speicher bis zum anonymisierten Surfen">
+
+<!ENTITY jap2ff.prev.tooltip.toolbarElementsGroup "Auswahl der Toolbarelemente von &jap2ff.prev.project;">
+<!ENTITY jap2ff.prev.tooltip.toolbarElementsAnonLibState "zeigt den Zustand des lokalen Proxy-Servers von &jap2ff.prev.project;">
+<!ENTITY jap2ff.prev.tooltip.toolbarElementsUserCount "zeigt die aktuelle Anzahl aktiver Nutzer des gewählten AN.ON Servers">
+<!ENTITY jap2ff.prev.tooltip.toolbarElementsAnonmeter "stellt das &jap2ff.toolbar.anonLevel; als Analoganzeige dar">
+<!ENTITY jap2ff.prev.tooltip.toolbarElementsAnonbar "stellt das &jap2ff.toolbar.anonLevel; als Balken dar">
+<!ENTITY jap2ff.prev.tooltip.toolbarElementsAnontext "zeigt das &jap2ff.toolbar.anonLevel; in Textform an">
+
+<!ENTITY jap2ff.prev.tooltip.toolbarElementsAnonLevel "wählen Sie eine der Möglichkeiten">
+<!ENTITY jap2ff.prev.tooltip.toolbarRefreshAlways "regelmässig Statusabfrage der Server">
+<!ENTITY jap2ff.prev.tooltip.toolbarRefresh "keine Traffic für Aktualisierung, wenn nicht anonymisiert gesurft wird">
+
+<!ENTITY jap2ff.prev.tooltip.anonsetting "Auswahl von Optionen für die Anonymisierung">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsCookies "verhindert die Nutzung von Cookies, dies kann zu Problemen führen">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsJavaScript "verhindert die Benutzung von Java Script, dies kann zu Problemen führen">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsJava "verhindert die Benutzung von Java, dies kann zu Problemen führen">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsRefs "verhindert das Senden von Referers, dies kann zu Problemen führen">
+
+<!ENTITY jap2ff.prev.tooltip.anonsettingsFakeAgent "verändert die Headerinfo über Browser und Betriebsystem im HTTP Request, dies kann zu Problemen führen">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsFakeAgentType0 "Internet Explorer 6.0, Windows 2000">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsFakeAgentType1 "Internet Explorer 6.0, Windows XP">
+
+<!ENTITY jap2ff.prev.tooltip.anonsettingsDummy "sendet bedeutungslose Anfragen, um den Beobachter zu täuschen">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsDummyTime "Zeitintervall für das Senden von Dummydaten">
+<!ENTITY jap2ff.prev.tooltip.anonsettingsDummyWhenOff "sendet Dummy auch beim &quot;nicht anonymisierten&quot; Surfen (nur wenn lokaler Proxy läuft)">
+
+<!ENTITY jap2ff.prev.tooltip.warning.directConnect "es erscheint eine Warnmeldung, wenn Seiten nicht anonymisiert aufrufen">
+<!ENTITY jap2ff.prev.tooltip.warning.switchDirect "es erscheint eine Warnmeldung beim Wechsel zum &quot;nicht anonymisierten&quot; Surfen">
+<!ENTITY jap2ff.prev.tooltip.warning.lowUserWarn "es erscheint eine Warnmeldung bei zu wenig Nutzern">
+<!ENTITY jap2ff.prev.tooltip.warning.lowUserCount "hier legen Sie die Schwelle für die Warnung fest">
+
+<!ENTITY jap2ff.prev.tooltip.cascades.reconnect "kommt es zu einem Fehler versucht der Proxy automatisch eine neue Verbindung zu bekommen">
+<!ENTITY jap2ff.prev.tooltip.cascades.noPay "es werden nur kostenlose AN.ON Server angezeigt">
+
+<!ENTITY jap2ff.prev.tooltip.debugLevel "hier können Sie das Debuglevel der Logausgaben für die Java Console und/oder Datei wählen">
+<!ENTITY jap2ff.prev.tooltip.debugType "hier können Sie den Debugtyp der Logausgaben für die Java Console und/oder Datei wählen">
+<!ENTITY jap2ff.prev.tooltip.debugDetail "hier können Sie das Detaillevel der Logausgaben für die Java Console und/oder Datei wählen">
+<!ENTITY jap2ff.prev.tooltip.debugFileGroup "hier können Sie Einstellungen für ein Log Datei vornehmen">
+<!ENTITY jap2ff.prev.tooltip.debugFileCheck "startet das Loggen in eine Datei">
+<!ENTITY jap2ff.prev.tooltip.debugFilePlace "zeigt den Speicherort der Logdatei an">
+<!ENTITY jap2ff.prev.tooltip.debugFileSelect "öffnet den Datei wählen Dialog">
+
+<!-- lowUserWarn Tooltips -->
+<!-- siehe Stringbundle
+     jap2ff.lowUserWarn.tooltip.accept
+	 jap2ff.lowUserWarn.tooltip.cancel
+	 jap2ff.lowUserWarn.tooltip.extra1
+-->
+<!ENTITY jap2ff.lowUserWarn.tooltip.again "durch entfernen des Hakens wird diese Warnung nicht wieder gezeigt">
+<!ENTITY jap2ff.lowUserWarn.tooltip.newValue "legen Sie die neue Grenze für Warnungen fest">
+
+<!-- help Window Tooltips -->
+
+<!-- Feedback Win -->
+<!ENTITY jap2ff.feedback.window.label "Hinweis">
+<!ENTITY jap2ff.feedbackWin.again "wieder anzeigen">
+<!ENTITY jap2ff.feedbackWin.text.label_0 "Vielen Dank für den Test der &jap2ff.prev.project; Extension!">
+<!ENTITY jap2ff.feedbackWin.text.label_1 "Das Projekt hat sich die Aufgabe gestellt, die Nutzung von JAP durch eine Integration in den Browser zu erleichtern.">
+<!ENTITY jap2ff.feedbackWin.text.label_2 "Um dieses Ziel zu erreichen soll nun in dieser Phase der Entwicklung ein erstes Feedback durch die Nutzer erfolgen.">
+<!ENTITY jap2ff.feedbackWin.text.label_3 "Um die Benutzung so einfach wie möglich zu halten und dennoch dem versierten Nutzer alle Möglichkeiten zu eröffnen, wurde ein mehrstufiges Benutzerkonzept umgesetzt. Hier können Sie in den Einstellungen den Benutzertyp wählen zu dem Sie gehören.">
+<!ENTITY jap2ff.feedbackWin.text.label_4 "Dabei ist zu beachten, dass dem erfahreneren Nutzer mehr Optionen zur Verfügung stehen. Für Notfälle gibt es den Rücksetzen Button, damit werden alle Einstellungen wieder auf den Installtionszustand zurück gesetzt.">
+<!ENTITY jap2ff.feedbackWin.text.label_5 "Email: ">
+<!ENTITY jap2ff.feedbackWin.text.label_6 "(auch unter Optionen -> über... zu finden)">
+<!ENTITY jap2ff.feedbackWin.text.label_7 "Hinweis: Im Augenblick findet keine Überprüfung der Zertifikate statt!">
+
+<!-- Start AnonLib Info -->
+<!ENTITY jap2ff.startAnonLib.text.label_0_0 "Durch den Start im Modus ">
+<!ENTITY jap2ff.startAnonLib.text.label_0_1 " verzögert sich der Browserstart um einige Sekunden ...">
+<!ENTITY jap2ff.startAnonLib.text.label_2 "Beenden Sie den Dialog mit Ok">
+<!ENTITY jap2ff.startAnonLib.text.label_1 "automatisch weiter in ">
+<!ENTITY jap2ff.startAnonLib.again.label "wieder anzeigen">
+
+<!-- anonLib Start Trouble Win -->
+<!ENTITY jap2ff.anonLibTroubleWindow.text.label "Wärend des letzten Starts von AN.ON ist ein Fehler aufgetreten, aus diesem Grund wird der Browser nun ohne Anonymisierung gestartet!">
+
+<!-- noCascade Trouble Win -->
+<!ENTITY jap2ff.noCascadeTrouble.text.label "Während der Kommunikation mit dem InfoService ist ein schwerer Fehler aufgetreten!">
+<!ENTITY jap2ff.noCascadeTrouble.text1.label "Es wird nun in den Modus &quot;nicht anonym Surfen&quot; gewechselt!">
+<!ENTITY jap2ff.noCascadeTrouble.text2.label "Bitte versuchen Sie es später noch einmal!">
+
+<!-- noInfoserviceWindow -->
+<!ENTITY jap2ff.noInfoserviceWindow.text.label "Während der Kommunikation mit dem InfoService ist ein Fehler aufgetreten!">
+<!ENTITY jap2ff.noInfoserviceWindow.text1.label "Durch diesen können die Anzeigen falsche Informationen über die jeweiligen &jap2ff.anonService; enthalten!">
+<!ENTITY jap2ff.noInfoserviceWindow.text2.label "Bitte versuchen Sie es später noch einmal!">

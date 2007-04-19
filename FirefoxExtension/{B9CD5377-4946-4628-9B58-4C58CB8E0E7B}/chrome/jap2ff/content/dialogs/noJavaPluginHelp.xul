@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog  id="noJavaPluginHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         buttons="extra1,accept"
+		 buttonlabelextra1="&jap2ff.noJavaPlugin.button.text;"
+		 minwidth="300px"
+		 maxwidth="450px"
+         minheight="150px"
+         title="&jap2ff.noJavaPlugin.window.label;"
+		 ondialogextra1="jap2ff_showPlugins();"
+		 onload="jap2ff_noJavaPluginHelp_init();"
+         >
+	     <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/noJava.js"/>
+		 
+		 <vbox style="font-family: arial, sans serif;">
+		    <spacer flex="1"/>
+		    <groupbox flex="1" style="text-align:left;border:2px solid red;padding:4px;background-color:white;">   
+			   <description id="noJavaPlugin_0"
+			                style="font-size:14px;"> 
+			                &jap2ff.noJavaPlugin.text_0;
+			   </description>
+			   <description id="noJavaPlugin_1"
+			                style="font-size:14px;margin-top:2px"> 
+			                &jap2ff.noJavaPlugin.text_1;
+			   </description>
+			   <description id="noJavaPlugin_2"
+			                style="font-size:14px;margin-top:15px"> 
+			                &jap2ff.noJavaPlugin.text_2;
+			   </description>
+			   <label id="jap2ff_downloadJavaLabel"
+			          value=""
+			          onclick="jap2ff_ShowSite(this.value);self.close();"
+			          style="color: #0000FF; text-decoration: underline; cursor: pointer;margin:5px;font-size:12px;" 
+			          />
+			   <description id="noJavaPlugin_3"
+			                style="font-size:14px;margin-top:15px"> 
+			                &jap2ff.noJavaPlugin.text_3;
+			   </description>
+			   <description id="noJavaPlugin_4"
+			                style="font-size:14px;margin-top:2px"> 
+			                &jap2ff.noJavaPlugin.text_4;
+			   </description>
+			   <description id="noJavaPlugin_5"
+			                style="font-size:14px;margin-top:15px"> 
+			                &jap2ff.noJavaPlugin.text_5;
+			   </description>
+			   <label id="jap2ff_forumUrl"
+			          style="color: #0000FF; text-decoration: underline; cursor: pointer;margin:5px;margin-bottom:15px;font-size:12px;" 
+			          value=""
+			          onclick="jap2ff_ShowSite(this.value);self.close();"
+			          />			   
+			</groupbox>   
+			<spacer flex="1"/>
+		 </vbox>
+</dialog>

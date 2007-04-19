@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="rdf:#$xuQHy3"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="1.5"
+                   em:maxVersion="2.1" />
+  <RDF:Description RDF:about="urn:mozilla:extension:file:jap2ff"
+                   em:package="content/"
+                   em:locale="locale/de-de/"
+                   em:skin="skin/classic/" />
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="{B9CD5377-4946-4628-9B58-4C58CB8E0E7B}"
+                   em:name="AN.ON Firefox Extension"
+                   em:version="0.5.18"
+                   em:updateURL="http://anon.inf.tu-dresden.de/develop/jap2ff/update.rdf"
+                   em:description="JAP for Firefox"
+                   em:creator="JAP-Team"
+                   em:homepageURL="http://anon.inf.tu-dresden.de/"
+                   em:optionsURL="chrome://browser/content/preferences/preferences.xul"
+                   em:iconURL="chrome://jap2ff/content/icons/icon32.png"
+				   em:aboutURL="chrome://jap2ff/content/dialogs/about.xul">
+    <em:targetApplication RDF:resource="rdf:#$xuQHy3"/>
+    <em:file RDF:resource="urn:mozilla:extension:file:jap2ff"/>
+  </RDF:Description>
+</RDF:RDF>

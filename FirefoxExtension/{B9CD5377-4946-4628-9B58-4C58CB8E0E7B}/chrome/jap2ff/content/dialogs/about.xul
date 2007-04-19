@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog id="aboutJap2ff"
+        buttons="accept"
+        ondialogaccept="return true"
+        buttonlabelaccept="&jap2ff.about.accept.label;"
+        title="&jap2ff.about.label;"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        onload="init(this);"
+        style="padding:1px;padding-bottom:5px;"
+        > 
+		
+  <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/about.js"/>
+  <script type="application/x-javascript" src="chrome://browser/content/browser.js"/>
+  
+  
+    
+  <vbox style="width: 360px;background:white;padding:0px;padding-bottom:8px;margin:0;font-size:12px;"
+        flex="1"
+        >
+    <vbox style="margin-bottom:10px;padding:0px;">
+	    <hbox style="padding:0;margin:0;border:0;background-image:url(chrome://jap2ff/content/icons/aboutHead/bgtop.gif)">
+            <image src="chrome://jap2ff/content/icons/aboutHead/japhead1.gif"
+			       style="padding:0px;margin:0px;margin-left:0px;margin-right:0px;"
+			       />
+		</hbox>
+		<hbox style="padding:0;margin:0;border:0;background-image:url(chrome://jap2ff/content/icons/aboutHead/gray.gif)">	   
+		    <image src="chrome://jap2ff/content/icons/aboutHead/japhead2.gif"
+			       style="padding:0px;margin:0px;margin-left:0px;margin-right:0px;"
+			       />
+		</hbox>
+		<hbox style="padding:0;margin:0;border:0;background-image:url(chrome://jap2ff/content/icons/aboutHead/white.gif)">	   
+		    <image src="chrome://jap2ff/content/icons/aboutHead/japhead3.gif"
+			       style="padding:0px;margin:0px;margin-left:0px;margin-right:0px;"
+			       />	   
+		</hbox>		   	   	       
+    </vbox>
+    <hbox style="margin-top:25px;margin-left:6px;">
+      <label value="&jap2ff.prev.project; Firefox Extension" 
+             style="font-weight: bold; margin-right: 2px;" 
+             />
+    </hbox>
+    <hbox style="margin-left:6px;">
+      <label value="Version: "
+             style="margin-right:0;" 
+             /> 
+      <label id="jap2ff_version"
+             style="margin-right: 2px;" 
+             />
+    </hbox>
+    <hbox style="margin-left:6px;">
+      <label value="AnonLib: "
+             style="margin-right:0;"
+             />
+      <label id="anonlibVersion"
+             style="margin:0;margin-right: 2px;"
+             value=""
+             />        
+    </hbox>
+	<vbox style="margin-left:6px;">
+      <label   value="JAP-2-Firefox Project" 
+               />         
+      <label   id="jap2ff_projectSite"
+               value=""
+               style="color: #0000FF; text-decoration: underline; cursor: pointer;"  
+               onclick="jap2ff_ShowProjectSite(this.value); self.close();" 
+               />
+      <label   id="jap2ff_mail"
+               value=""
+               onclick="jap2ff_sendMail2Team(this.value);self.close();"
+               style="color: #0000FF; text-decoration: underline; cursor: pointer;" 
+               />
+      <label   id=""
+               value="JAP - Home"
+               style="margin-top:10px;"
+               />         
+      <label   id=""
+               value="http://anon.inf.tu-dresden.de"
+               onclick="jap2ff_ShowProjectSite(this.value);self.close();"
+               style="color: #0000FF; text-decoration: underline; cursor: pointer;" 
+               /> 
+	</vbox>		                          
+  </vbox>
+  <separator class="groove" 
+             style="margin-top:0;margin-bottom:15px;"
+             />  
+  
+</dialog>

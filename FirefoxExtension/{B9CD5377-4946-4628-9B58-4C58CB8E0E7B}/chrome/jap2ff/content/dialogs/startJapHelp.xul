@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog id="startJapHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         buttons="accept"
+		 width="450px"
+         height="200px"
+         title="Info"
+         windowtype="JAPInfo"
+		 onload="init(this);"
+		 onclick="removeCloser();"
+		 >
+         
+         <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/startJapHelp.js"/>
+
+	     
+		 <vbox>
+		    <spacer flex="1"/>
+		    <groupbox flex="1" 
+		              style="text-align:left;margin:5px;padding:5px;">   
+			   <description style="font-size:+14px;font-family:Arial,sans-serif;"
+			                >
+			                &jap2ff.startAnonLib.text.label_0_0;<html:b>&jap2ff.japCheckbox.label;</html:b>&jap2ff.startAnonLib.text.label_0_1;
+			                </description>          
+			   <description style="font-size:+14px;font-family:Arial,sans-serif;"
+			                >&jap2ff.startAnonLib.text.label_2;</description>             
+			</groupbox>
+			<hbox>   
+			    <label value="&jap2ff.startAnonLib.text.label_1;:"
+			           style="font-size:+14px;font-family:Arial,sans-serif;"
+			           />
+			    <spacer width="5px"/>       
+			    <label id="counterClose"
+			           value="20 s"
+			           style="font-size:+14px;font-family:Arial,sans-serif;"
+			           />
+			</hbox>           
+			<spacer flex="1" height="25px"/>
+			<command id="startAnonlibInfoShowAgain" oncommand="jap2ff_showAgain();"/>
+			<checkbox id="startAnonlibInfoShowAgainCheckbox" 
+			          label="&jap2ff.startAnonLib.again.label;"
+			          command="startAnonlibInfoShowAgain"
+			          />
+		 </vbox>
+	     
+	  
+</dialog>

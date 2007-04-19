@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog id="noJavaHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         buttons="accept,cancel"
+         buttonlabelaccept="&jap2ff.warnOff.accept.label;"
+         buttonlabelcancel="&jap2ff.warnOff.cancel.label;"
+		 minwidth="300px"
+         minheight="120px"
+         title="&jap2ff.warnOff.window.label;"
+         onload="init();"
+         ondialogaccept="return doOK();"
+         ondialogcancel="return doCancel();"
+         >
+         
+        
+         
+		 <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/warningOnOff.js"/>
+		 <vbox>
+		    <spacer flex="1"/>
+		    <groupbox flex="1" style="text-align:center;">   
+			   <description id="warningOnOff" 
+			                value="&jap2ff.warnOff.text.label;" 
+			                />
+			</groupbox>   
+			<spacer flex="1"/>
+		    <checkbox id="warn_showAgain" 
+		              label="&jap2ff.warnOff.again.label;" 
+		              onclick="changeWarning(this);"/>
+		 </vbox>
+	     
+	  
+</dialog>

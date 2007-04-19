@@ -1,0 +1,9 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.jap2ff_isOn_class {
+    color:black;
+}
+
+.jap2ff_isOff_class {
+    color:gray;
+}

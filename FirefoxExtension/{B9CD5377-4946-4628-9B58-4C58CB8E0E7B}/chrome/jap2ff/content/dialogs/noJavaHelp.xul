@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog id="noJavaHelp"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         buttons="extra1,cancel"
+         buttonlabelextra1="&jap2ff.noJava.extra1.label;"	 
+		 minwidth="450px"
+         minheight="150px"
+         title="&jap2ff.noJava.window.label;"
+		 ondialogextra1="jap2ff_setJavaOn();"
+         windowtype="JAPInfo"
+         >
+         
+		 <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/noJava.js"/>
+		 
+		 <vbox>
+		    <spacer flex="1"/>
+		    <groupbox flex="1" style="text-align:center;">   
+			   <description id="noJavaEnabled" 
+			                value="&jap2ff.noJava.text.label;"/>
+			</groupbox>   
+			<spacer flex="1"/>
+		 </vbox>
+	     
+	  
+</dialog>

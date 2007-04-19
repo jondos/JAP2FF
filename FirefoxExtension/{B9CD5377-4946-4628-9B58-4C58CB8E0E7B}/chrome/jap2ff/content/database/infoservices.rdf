@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NS1="chrome://jap2ff/content/scripts/database/InfoService#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Seq RDF:about="chrome://jap2ff/content/scripts/database/InfoServices">
+    <RDF:li RDF:resource="chrome://jap2ff/content/scripts/database/InfoService#0BF136744FA4265B6BA09B60B0D0E051EE714073"/>
+    <RDF:li RDF:resource="chrome://jap2ff/content/scripts/database/InfoService#4EAD8F831010B39FB3B014CFE433C2D8EB50D311"/>
+    <RDF:li RDF:resource="chrome://jap2ff/content/scripts/database/InfoService#880D9306B90EC8309178376B43AC26652CE52B74"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="chrome://jap2ff/content/scripts/database/InfoService#880D9306B90EC8309178376B43AC26652CE52B74"
+                   NS1:id="880D9306B90EC8309178376B43AC26652CE52B74"
+                   NS1:name="JAP-Team InfoService"
+                   NS1:host="infoservice.inf.tu-dresden.de"
+                   NS1:ports="80,6543" />
+  <RDF:Description RDF:about="chrome://jap2ff/content/scripts/database/InfoService#0BF136744FA4265B6BA09B60B0D0E051EE714073"
+                   NS1:id="0BF136744FA4265B6BA09B60B0D0E051EE714073"
+                   NS1:name="Regensburg/HE"
+                   NS1:host="87.230.9.148"
+                   NS1:ports="80" />
+  <RDF:Description RDF:about="chrome://jap2ff/content/scripts/database/InfoService#4EAD8F831010B39FB3B014CFE433C2D8EB50D311"
+                   NS1:id="4EAD8F831010B39FB3B014CFE433C2D8EB50D311"
+                   NS1:name="Free InfoService"
+                   NS1:host="83.133.121.12"
+                   NS1:ports="80" />
+</RDF:RDF>

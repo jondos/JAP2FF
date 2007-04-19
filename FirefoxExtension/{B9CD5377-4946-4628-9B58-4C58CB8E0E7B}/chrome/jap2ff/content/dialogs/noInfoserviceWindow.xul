@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://jap2ff/locale/browser-overlay.dtd">
+
+<dialog  id="noInfoserviceWindow"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         buttons="accept"
+		 width="450px"
+         height="200px"
+         title="Info"
+         windowtype="JAPInfo"
+         onload="init(this);"
+		 >
+         
+         
+         
+         <script type="application/x-javascript" src="chrome://jap2ff/content/scripts/noInfoserviceWindow.js"/>
+         	     
+		 <vbox flex="1">
+		    <spacer flex="1"/>
+		    <groupbox flex="1" 
+		              style="text-align:left;margin:5px;padding:5px;">   
+			   <description style="font-size:+14px;font-family:Arial,sans-serif;"
+			                flex="1"
+			                >
+			                &jap2ff.noInfoserviceWindow.text.label;
+			                </description>
+			   <description style="font-size:+14px;margin-top:5px;font-family:Arial,sans-serif;"
+			                >
+			                &jap2ff.noInfoserviceWindow.text1.label;
+			                </description>          
+			   <description style="font-size:+14px;margin-top:5px;font-family:Arial,sans-serif;"
+			                >
+			                &jap2ff.noInfoserviceWindow.text2.label;
+			                </description>                                              
+			
+			</groupbox>
+			
+	     </vbox>
+	  
+</dialog>
